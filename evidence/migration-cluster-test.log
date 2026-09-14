@@ -1,0 +1,18 @@
+=== Test 1: bit-reproducibility across two identical runs ===
+  ✓ two runs → identical cluster state (hash 734370142)
+=== Test 2: independent of host scheduling (sync vs async yielding) ===
+  ✓ async-yielded run identical to tight-loop run
+=== Test 3: migration is non-vacuous (changes the trajectory) ===
+  ✓ migration run differs from a no-migration run of the same seeds
+  ✓ random topology is deterministic and differs from ring
+=== Test 4: RNG purity — migration never consumes the step stream ===
+  ✓ no-migration deme rng identical to solo world of same seed
+  ✓ deme rng still identical to solo right after the migration pass
+  ✓ deme rng diverges after migration (population changed — expected, not a leak)
+=== Test 5: save/load round-trips the migration sub-streams ===
+  ✓ per-deme rng + migRng + tick round-trip exactly
+  ✓ cluster (topology) rng round-trips
+  ✓ load-same-save-twice → identical 300-tick futures
+  ✓ loading a 3-deme save into a 2-deme cluster is rejected
+
+✅ cluster determinism OK

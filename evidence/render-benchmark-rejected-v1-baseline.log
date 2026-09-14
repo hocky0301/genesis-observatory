@@ -1,0 +1,9 @@
+22:14  up 1 day, 15:38, 2 users, load averages: 2.57 3.75 5.07
+file://<repo>/tools/render-benchmark.mjs:56
+    if(!loadValid)throw new Error(`Machine became busy during ${JSON.stringify(scenario)}: ${loadAfter}`);
+                        ^
+
+Error: Machine became busy during {"backend":"baseline","zoom":0.4,"ribbon":false,"clade":false}: 7.31591796875,4.72314453125,5.23388671875
+    at file://<repo>/tools/render-benchmark.mjs:56:25
+
+Node.js v22.11.0

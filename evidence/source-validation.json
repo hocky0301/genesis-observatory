@@ -1,0 +1,46 @@
+{
+  "engineSourceSha256": "3407d3ebf29e2ccb0a6baaa70176f5e8e18f720f6bf98a3e4e902216386d4a9b",
+  "files": [
+    "src/world.js",
+    "src/creature.js",
+    "src/neat.js",
+    "src/config.js",
+    "src/genome.js",
+    "src/rng.js"
+  ],
+  "checks": [
+    {
+      "id": "s42-t1200",
+      "gzipSha256": "90ff55b9823f358b5ebe70401ae38ebfbd5d54acbd17a2b1a6e5ee415c321cca",
+      "manifestMatches": true,
+      "engineSourceMatches": true,
+      "continuation": {
+        "ticks": 100,
+        "status": "exact",
+        "runtime": "v22.11.0"
+      }
+    },
+    {
+      "id": "s42-t2400",
+      "gzipSha256": "73af0d719bc3da222c6565657bc83079fc04c428fc90a4e4c4a7d3b5483e1e92",
+      "manifestMatches": true,
+      "engineSourceMatches": true,
+      "continuation": {
+        "ticks": 100,
+        "status": "exact",
+        "runtime": "v22.11.0"
+      }
+    },
+    {
+      "id": "s42-t9000",
+      "gzipSha256": "94135a708fc4b9cf665c37efcc73230a6680ff0be5089ca9bb1620aff5f4fa15",
+      "manifestMatches": true,
+      "engineSourceMatches": true,
+      "continuation": {
+        "ticks": 100,
+        "status": "exact",
+        "runtime": "v22.11.0"
+      }
+    }
+  ]
+}

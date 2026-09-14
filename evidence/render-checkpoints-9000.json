@@ -1,0 +1,80 @@
+{
+  "camera": "world centre / zoom 0.4",
+  "results": [
+    {
+      "checkpoint": "s42-t9000",
+      "sha256": "94135a708fc4b9cf665c37efcc73230a6680ff0be5089ca9bb1620aff5f4fa15",
+      "file": "render-checkpoint-webgl-t9000.png",
+      "tick": 9000,
+      "population": 5587,
+      "livingSpecies": 42,
+      "renderer": "GLRenderer",
+      "camera": {
+        "cx": 1600,
+        "cy": 1050,
+        "zoom": 0.4
+      },
+      "glError": 0
+    },
+    {
+      "checkpoint": "s42-t9000",
+      "file": "render-checkpoint-webgl-t9000-clade.png",
+      "selection": {
+        "selectedSpecies": 2,
+        "highlighted": 463,
+        "cladeIds": [
+          2,
+          16,
+          29,
+          35,
+          38,
+          45,
+          48,
+          55,
+          56,
+          65,
+          69
+        ],
+        "label": "Clade #2 · 11 lineages · 463 alive"
+      }
+    },
+    {
+      "checkpoint": "s42-t9000",
+      "sha256": "94135a708fc4b9cf665c37efcc73230a6680ff0be5089ca9bb1620aff5f4fa15",
+      "file": "render-checkpoint-canvas-t9000.png",
+      "tick": 9000,
+      "population": 5587,
+      "livingSpecies": 42,
+      "renderer": "Renderer",
+      "camera": {
+        "cx": 1600,
+        "cy": 1050,
+        "zoom": 0.4
+      },
+      "glError": null
+    },
+    {
+      "checkpoint": "s42-t9000",
+      "file": "render-checkpoint-canvas-t9000-clade.png",
+      "selection": {
+        "selectedSpecies": 2,
+        "highlighted": 463,
+        "cladeIds": [
+          2,
+          16,
+          29,
+          35,
+          38,
+          45,
+          48,
+          55,
+          56,
+          65,
+          69
+        ],
+        "label": "Clade #2 · 11 lineages · 463 alive"
+      }
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,25 @@
+progress 500/9100 pop=1002
+progress 1000/9100 pop=2405
+saved s42-t1200 pop=2846 species=2 bytes=2116282
+verified checkpoint at 1200 +100 ticks exactly
+progress 1500/9100 pop=3446
+progress 2000/9100 pop=3683
+saved s42-t2400 pop=3858 species=8 bytes=2846603
+verified checkpoint at 2400 +100 ticks exactly
+progress 2500/9100 pop=3885
+progress 3000/9100 pop=4404
+progress 3500/9100 pop=4828
+progress 4000/9100 pop=4711
+progress 4500/9100 pop=4353
+progress 5000/9100 pop=4458
+progress 5500/9100 pop=5196
+progress 6000/9100 pop=5543
+progress 6500/9100 pop=5665
+progress 7000/9100 pop=5671
+progress 7500/9100 pop=5914
+progress 8000/9100 pop=5726
+progress 8500/9100 pop=5120
+saved s42-t9000 pop=5587 species=42 bytes=4273399
+progress 9000/9100 pop=5587
+verified checkpoint at 9000 +100 ticks exactly
+CHECKPOINTS VERIFIED

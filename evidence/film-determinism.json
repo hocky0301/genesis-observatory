@@ -1,0 +1,40 @@
+{
+  "sourceFrames": 30,
+  "identicalPNGs": 30,
+  "expectedTickCheck": true,
+  "runtimeA": {
+    "renderer": "WebGL2",
+    "glRenderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)",
+    "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "width": 1280,
+    "height": 720
+  },
+  "runtimeB": {
+    "renderer": "WebGL2",
+    "glRenderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)",
+    "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "width": 1280,
+    "height": 720
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/152.0.7977.76",
+    "revision": "@0d89dfa2dd7c1ec4b8a14b9f303f887bb63b6174",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+    "jsVersion": "15.2.124.19"
+  },
+  "sourceFiles": {
+    "src/world.js": "3ce75773a453babb6665515a730ab39052bc1e17d69c9483ed9bb5bb8baad428",
+    "src/creature.js": "45bdb7533546fb4710231b9fe2b5d3dcdc34e390ae69d93e885b622808613031",
+    "src/neat.js": "cd5a15a3b79594f187d6fca44cd33a3f649386ede66ff64014ae3408a465be43",
+    "src/config.js": "07e57e5925b3369c90605bae3314e9d2e9f915ac9c04242cc4e0c7b28fea8a1e",
+    "src/palette.js": "ca8a133e7295ea553e8c25a5fa5e221f75dfaef3e626e0ee719b7cda0936d9c4",
+    "src/gl-renderer.js": "9dd9f7f94858e066cdd2325c9255ad86cd8c246fd9d0735f037649e802f5b5e9",
+    "src/render-snapshot.js": "83d72b71bffb9a10044bef5a43068cbe26df546d68eb0b37abf64d02619915fc",
+    "src/film.js": "25674bb3bec13c1b86b2cfb3fe0d9b4dd8f41b526628c9cec4ad4eb09979dec1",
+    "src/recorder.js": "4d059fc2fdf78313ae73b072a6e8947f92b0b2f0c9cfae1c9d85f5256897fee5",
+    "tools/shoot.mjs": "5b5418f3d529cc3b507cf2cb99b0cfc6e3656d51fe0e54e99c6b1e9e8ba2ff4d"
+  },
+  "scope": "Same Chrome/OS/GPU; no cross-engine claim",
+  "pass": true
+}

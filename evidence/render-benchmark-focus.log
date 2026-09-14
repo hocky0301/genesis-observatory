@@ -1,0 +1,4 @@
+22:30  up 1 day, 15:54, 2 users, load averages: 8.35 19.76 15.84
+baseline zoom=0.4 ribbon=false clade=false p50=60.01 fps cpu=0.545 ms accepted=false backgroundIdle=54.75/76.55%
+webgl zoom=0.4 ribbon=false clade=false p50=60.01 fps cpu=0.140 ms accepted=false backgroundIdle=77.73/71.87%
+webgl zoom=0.4 ribbon=true clade=true p50=60.01 fps cpu=1.960 ms accepted=false backgroundIdle=74.74/77.87%

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GENESIS — an artificial life observatory</title>
+  <meta name="description" content="An artificial-life observatory. Follow lineages, inspect neural creatures, and test ecological predictions in matched experiments." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='42' fill='%2336e0b0'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="app">
+    <main id="stage">
+      <canvas id="world"></canvas>
+      <canvas id="overlay"></canvas>
+      <header class="stage-head"><div><p class="eyebrow">ARTIFICIAL LIFE OBSERVATORY</p><h1>GENESIS<span class="title-orbit">◌</span></h1></div><div class="stage-status"><span class="live-indicator"></span><span id="worldStatus">INITIALIZING</span><span id="transportBadge" class="badge">connecting</span></div></header>
+      <div class="checkpoint-bar"><span class="eyebrow">ENTER A WORLD</span><select id="checkpointSelect" aria-label="Choose a checkpoint"><option value="scratch">From the beginning</option></select><button id="btnCheckpoint" class="text-btn">Load ↗</button><span id="checkpointStatus" role="status">Looking for curated checkpoints…</span></div>
+      <div id="loadingState" role="status" class="loading-state"><span class="loading-orbit"></span><span id="loadingMessage">Preparing a living world</span></div>
+      <section id="tour" class="tour" aria-label="Guided observation"><div class="sec-row"><span id="tourCount" class="eyebrow">GUIDED OBSERVATION</span><button id="tourPause" class="text-btn" aria-label="Pause guided observation">Pause</button></div><h2 id="tourTitle"></h2><p id="tourBody"></p><div class="tour-foot"><button id="tourPrevious" class="text-btn" aria-label="Previous observation">←</button><button id="tourNext" class="text-btn" aria-label="Next observation">→</button><button id="takeControl" class="text-btn take-control">TAKE CONTROL ↗</button></div></section>
+      <div id="ribbon" class="history-ribbon"><div class="sec-row"><span class="eyebrow">LINEAGE THROUGH TIME</span><span id="cladeLabel">Select a band to follow its descendants</span><button id="clearClade" class="text-btn" hidden>Clear selection ×</button></div><canvas id="mullerRibbon" aria-label="Full lineage history; click a lineage band to highlight its descendants"></canvas><div class="ribbon-foot"><span id="historyStart">ORIGIN</span><span>ABUNDANCE · ADAPTIVELY SAMPLED HISTORY</span><span id="historyEnd">NOW</span></div></div>
+      <div id="hint">drag to pan · scroll to zoom · click a creature to inspect</div>
+      <div id="legend">
+        <span><i class="dot food"></i>nectar</span>
+        <span><i class="dot toxic"></i>toxic</span>
+        <span><i class="dot carrion"></i>carrion</span>
+        <span><i class="dot lineage"></i>herbivore</span><span><i class="dot scav"></i>scavenger</span>
+        <span><i class="dot carn"></i>carnivore</span>
+      </div>
+      <div id="toast" role="status"></div>
+    </main>
+
+    <aside id="panel">
+      <header class="brand"><div class="sec-row"><span class="eyebrow">FIELD NOTES</span><span class="badge">FIELD EDITION</span></div><h2>Small rules. Unwritten histories.</h2><p class="tagline">Observe what survives. Predict what changes.</p></header>
+
+      <section class="stat-grid" id="statGrid">
+        <div class="stat"><div class="val" id="statPop">—</div><div class="lbl">population</div></div>
+        <div class="stat"><div class="val" id="statSpecies">—</div><div class="lbl">species</div></div>
+        <div class="stat"><div class="val" id="statGen">—</div><div class="lbl">max generation</div></div>
+        <div class="stat"><div class="val" id="statCarrion">—</div><div class="lbl">carrion</div></div>
+        <div class="stat"><div class="val" id="statFood">—</div><div class="lbl">food</div></div>
+        <div class="stat"><div class="val" id="statTick">—</div><div class="lbl">tick</div></div>
+      </section>
+
+      <section id="ecologyLab" class="ecology-lab"><div class="sec-row"><span class="eyebrow">ECOLOGY LAB</span><span class="lab-mark">↗</span></div><h2>Make a prediction.</h2><p class="lab-intro">Fork this exact moment. Change one pressure. Compare with an untouched control.</p><form id="labForm"><label for="labIntervention">Intervention</label><select id="labIntervention"><option value="food-half">Food arrival × 0.5</option><option value="metabolism-double">Base + movement metabolism × 2</option><option value="toxin-zero">Toxin energy loss → 0</option></select><div class="lab-inputs"><div><label for="labPrediction">Your predicted population</label><input id="labPrediction" type="number" min="0" step="1" placeholder="Enter your estimate" required /></div><div><label for="labTicks">Ticks ahead</label><input id="labTicks" type="number" min="1" max="10000" step="1" value="1800" required /></div></div><button id="labRun" class="btn primary" type="submit">Lock prediction &amp; run experiment ↗</button></form><div id="labProgress" hidden><div class="sec-row"><span id="labProgressLabel">Preparing matched worlds</span><button id="labCancel" class="text-btn">Cancel</button></div><progress id="labProgressBar" max="1" value="0"></progress><canvas id="labChart" aria-label="Control and intervention population through time"></canvas></div><div id="labResult" hidden><div class="lab-result-grid"><div><span>Prediction</span><strong id="labPredicted">—</strong></div><div><span>Control</span><strong id="labControl">—</strong></div><div><span>Intervention</span><strong id="labActual">—</strong></div></div><p id="labError"></p><p id="labEffect"></p><div class="btn-row"><button id="labViewControl" class="btn small">View control</button><button id="labViewTreatment" class="btn small">View intervention</button><button id="labReturn" class="btn small">Return to observatory</button></div><button id="labExport" class="text-btn">Export reproducible experiment ↓</button></div><p id="labStatus" class="small-copy" role="status">Your estimate is locked before either branch runs.</p></section>
+      <details class="controls-details" open><summary>OBSERVATORY CONTROLS</summary><section class="transport">
+        <div class="btn-row">
+          <button id="btnPlay" class="btn primary" title="play / pause (space)">⏸ pause</button>
+          <button id="btnStep" class="btn" title="step one tick">⏭ step</button>
+          <button id="btnReset" class="btn" title="new world">↺ reset</button>
+        </div>
+        <div class="ctrl">
+          <label for="speed">speed <span id="speedLabel" class="mono">1×</span></label>
+          <input type="range" id="speed" min="0" max="20" step="1" value="2" />
+        </div>
+        <div class="btn-row">
+          <button id="btnCataclysm" class="btn danger" title="mass-extinction event">☄ cataclysm</button>
+          <button id="btnSave" class="btn" title="download world">💾 save</button>
+          <button id="btnLoad" class="btn" title="load world">📂 load</button>
+          <input type="file" id="fileInput" accept="application/json" hidden />
+        </div>
+        <div class="ctrl seed">
+          <label for="seedInput">seed</label>
+          <input type="text" id="seedInput" class="mono" value="1337" />
+          <button id="btnReseed" class="btn small">↺ seed</button>
+        </div>
+      </section>
+
+      <section class="sliders">
+        <div class="ctrl">
+          <label for="foodRate">food rate <span id="foodRateLabel" class="mono"></span></label>
+          <input type="range" id="foodRate" min="0" max="200" step="1" />
+        </div>
+        <div class="ctrl">
+          <label for="mutRate">mutation rate <span id="mutRateLabel" class="mono"></span></label>
+          <input type="range" id="mutRate" min="0" max="0.6" step="0.01" />
+        </div>
+      </section>
+
+      </details><section class="charts">
+        <div class="chart"><canvas id="chartPop"></canvas></div>
+        <div class="chart"><canvas id="chartGen"></canvas></div>
+        <div class="chart"><canvas id="chartTraits"></canvas></div>
+        <div class="chart"><canvas id="chartSpecies"></canvas></div>
+      </section>
+
+      <section class="phylo-sec">
+        <div class="sec-label sec-row">
+          <span id="phyloLabel">phylogeny · species lineages</span>
+          <button id="btnPhyloToggle" class="btn small" title="switch view">⤳ Muller</button>
+        </div>
+        <div class="phylo" id="phyloWrap"><canvas id="phyloCanvas"></canvas></div>
+        <div class="phylo" id="mullerWrap" hidden><canvas id="mullerCanvas"></canvas></div>
+        <div class="phylo" id="heatmapWrap" hidden><canvas id="heatmapCanvas"></canvas></div>
+        <div class="phylo" id="behaviorWrap" hidden><canvas id="behaviorCanvas"></canvas></div>
+        <div class="scrub-row" id="behaviorScrubRow" hidden>
+          <button id="btnBehaviorPlay" class="btn small" title="play evolution">▶</button>
+          <input type="range" id="behaviorScrub" min="0" max="1000" value="1000" />
+        </div>
+      </section>
+
+      <section class="inspector empty" id="inspector">
+        <div class="insp-head">
+          <h2 id="specimenTitle">no specimen selected</h2>
+          <button id="btnDeselect" class="btn small" hidden>✕</button>
+        </div>
+        <p class="insp-hint" id="inspHint">click any creature in the world to dissect its brain &amp; genome</p>
+        <div id="inspBody" hidden>
+          <canvas id="netCanvas" class="net"></canvas>
+          <div class="specimen-stats" id="specimenStats"></div>
+          <div class="genome" id="genomeBars"></div>
+        </div>
+      </section>
+
+      <details class="limitations"><summary>What this world can tell you</summary><p>A designed artificial ecosystem, not a model of a real habitat.</p><p>Diet colors are genetic labels, not measured energy flows.</p><p>A single-seed intervention is not a general ecological law.</p><p>Replay equality is tested on the same runtime; cross-engine equality is not guaranteed.</p></details><button id="restartTour" class="text-btn">Guided observation ↗</button>
+      <footer class="foot">
+        <span id="fps" class="mono">— fps</span>
+        <span class="sep">·</span><span id="simRate" class="mono">— ticks/s</span>
+      </footer>
+    </aside>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

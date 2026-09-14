@@ -1,0 +1,40 @@
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '<repo>/docs/genesis-film.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : GENESIS — An Artificial Life Observatory
+    encoder         : Lavf62.12.101
+    comment         : Actual WebGL2 frames. 15 unique simulation frames/s; encoded to 30 fps. Original synthesized score.
+  Duration: 00:04:30.00, start: 0.000000, bitrate: 3293 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720, 3122 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      encoder         : Lavc62.28.101 libx264
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 161 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+[Parsed_volumedetect_0 @ 0xc6104c600] n_samples: 0
+Stream mapping:
+  Stream #0:1 -> #0:0 (aac (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, null, to 'pipe:':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : GENESIS — An Artificial Life Observatory
+    comment         : Actual WebGL2 frames. 15 unique simulation frames/s; encoded to 30 fps. Original synthesized score.
+    encoder         : Lavf62.12.101
+  Stream #0:0(und): Audio: pcm_s16le, 48000 Hz, stereo, s16, 1536 kb/s (default)
+    Metadata:
+      encoder         : Lavc62.28.101 pcm_s16le
+      handler_name    : SoundHandler
+[Parsed_volumedetect_0 @ 0xc6104ca80] n_samples: 25921536
+[Parsed_volumedetect_0 @ 0xc6104ca80] mean_volume: -16.2 dB
+[Parsed_volumedetect_0 @ 0xc6104ca80] max_volume: -3.4 dB
+[Parsed_volumedetect_0 @ 0xc6104ca80] histogram_3db: 309
+[Parsed_volumedetect_0 @ 0xc6104ca80] histogram_4db: 6557
+[Parsed_volumedetect_0 @ 0xc6104ca80] histogram_5db: 31790
+[out#0/null @ 0xc6104c300] video:0KiB audio:50628KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:04:30.01 bitrate=N/A speed=1.33e+03x elapsed=0:00:00.20    

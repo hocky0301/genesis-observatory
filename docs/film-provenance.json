@@ -1,0 +1,35 @@
+{
+  "duration": 270,
+  "width": 1280,
+  "height": 720,
+  "sourceFps": 15,
+  "encodedFps": 30,
+  "uniqueFrames": 4050,
+  "encodedFrames": 8100,
+  "checkpoints": [
+    "/checkpoints/s42-t1200-90ff55b9823f.json.gz",
+    "/checkpoints/s42-t2400-73af0d719bc3.json.gz",
+    "/checkpoints/s42-t9000-94135a708fc4.json.gz",
+    "/checkpoints/s42-t1200-90ff55b9823f.json.gz",
+    "/checkpoints/s42-t1200-90ff55b9823f.json.gz",
+    "/checkpoints/s42-t9000-94135a708fc4.json.gz"
+  ],
+  "sourceCapture": "out/film",
+  "audio": "Original deterministic additive synthesis, tools/score.mjs",
+  "captions": "Burned into source canvas; matching SRT",
+  "gif": {
+    "from": 52,
+    "duration": 6,
+    "width": 640,
+    "height": 360,
+    "fps": 10,
+    "maxColors": 80
+  },
+  "runtime": {
+    "renderer": "WebGL2",
+    "glRenderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)",
+    "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "width": 1280,
+    "height": 720
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "assayVersion": 1,
+  "units": "positive credited intake / nectar pellet energy (mixed nectar and toxin are netted before credit)",
+  "scope": "brain and body jointly; no brain-only causal claim; different assay from historical headless.mjs",
+  "trialTicks": 500,
+  "arenaSeeds": [
+    101,
+    202
+  ],
+  "sampleSize": 30,
+  "config": {
+    "width": 700,
+    "height": 700,
+    "seed": 1337,
+    "nIn": 16,
+    "nOut": 2,
+    "sensorCount": 3,
+    "neat": {
+      "weightMutRate": 0.8,
+      "weightStep": 0.18,
+      "weightReplaceChance": 0.07,
+      "toggleChance": 0.03,
+      "addConnChance": 0.3,
+      "addNodeChance": 0.12
+    },
+    "speciesThreshold": 0.9,
+    "startPopulation": 1,
+    "maxPopulation": 1,
+    "startFood": 240,
+    "maxFood": 700,
+    "foodRate": 9,
+    "foodEnergy": 28,
+    "foodDecay": 280,
+    "toxinFraction": 0.4,
+    "toxinEnergy": 22,
+    "bloomCount": 14,
+    "bloomFraction": 0.82,
+    "bloomSpread": 110,
+    "maxEnergy": 200,
+    "baseMetabolism": 0.045,
+    "moveMetabolism": 0.0065,
+    "startEnergy": 200,
+    "maturity": 50,
+    "maxAge": 1000000000,
+    "eatRadius": 7,
+    "reproduceThreshold": 1000000000000,
+    "reproduceCost": 95,
+    "childEnergyShare": 0.62,
+    "protect": false,
+    "protectShare": 0.06,
+    "protectMin": 0.9,
+    "fitShare": false,
+    "fitAlpha": 0.02,
+    "fitShareMin": 0.8,
+    "fitShareMax": 1.15,
+    "fitShareGain": 1,
+    "epsShare": 0.001,
+    "mutationRate": 0.16,
+    "mutationStep": 0.22,
+    "bigMutationChance": 0.03,
+    "carnivoreThreshold": 0.5,
+    "scavengerLabel": 0.95,
+    "predationSizeEdge": 1.12,
+    "meatFromEnergy": 0.55,
+    "meatPerSize": 20,
+    "maxCarrion": 0,
+    "carrionPerSize": 30,
+    "carrionFromEnergy": 0.5,
+    "carrionBite": 22,
+    "carrionDecay": 1100,
+    "predationLeftover": 0.45,
+    "sexualChance": 0.5,
+    "mateRadius": 64,
+    "maxTurn": 0.32,
+    "speedRef": 3.2,
+    "statsEvery": 8,
+    "historyPoints": 320
+  },
+  "results": [
+    {
+      "checkpoint": "s42-t1200",
+      "checkpointSha256": "90ff55b9823f358b5ebe70401ae38ebfbd5d54acbd17a2b1a6e5ee415c321cca",
+      "evolved": {
+        "genomes": 30,
+        "trials": 60,
+        "meanHarvest": 10.285217073321665,
+        "survivalFraction": 0.9833333333333333
+      },
+      "control": {
+        "genomes": 30,
+        "trials": 60,
+        "meanHarvest": 5.441986094994064,
+        "survivalFraction": 0.9833333333333333
+      },
+      "ratio": 1.8899748903773859
+    },
+    {
+      "checkpoint": "s42-t2400",
+      "checkpointSha256": "73af0d719bc3da222c6565657bc83079fc04c428fc90a4e4c4a7d3b5483e1e92",
+      "evolved": {
+        "genomes": 30,
+        "trials": 60,
+        "meanHarvest": 16.311051236843703,
+        "survivalFraction": 1
+      },
+      "control": {
+        "genomes": 30,
+        "trials": 60,
+        "meanHarvest": 5.441986094994064,
+        "survivalFraction": 0.9833333333333333
+      },
+      "ratio": 2.9972607338794557
+    },
+    {
+      "checkpoint": "s42-t9000",
+      "checkpointSha256": "94135a708fc4b9cf665c37efcc73230a6680ff0be5089ca9bb1620aff5f4fa15",
+      "evolved": {
+        "genomes": 30,
+        "trials": 60,
+        "meanHarvest": 18.623216185992742,
+        "survivalFraction": 1
+      },
+      "control": {
+        "genomes": 30,
+        "trials": 60,
+        "meanHarvest": 5.441986094994064,
+        "survivalFraction": 0.9833333333333333
+      },
+      "ratio": 3.4221359373049
+    }
+  ]
+}

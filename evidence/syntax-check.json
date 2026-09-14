@@ -1,0 +1,268 @@
+{
+  "command": "node --check <each module>",
+  "node": "v22.11.0",
+  "checks": [
+    {
+      "file": "serve.mjs",
+      "exit": 0
+    },
+    {
+      "file": "sim.worker.js",
+      "exit": 0
+    },
+    {
+      "file": "src/behaviortree.js",
+      "exit": 0
+    },
+    {
+      "file": "src/camera.js",
+      "exit": 0
+    },
+    {
+      "file": "src/charts.js",
+      "exit": 0
+    },
+    {
+      "file": "src/cluster.js",
+      "exit": 0
+    },
+    {
+      "file": "src/config.js",
+      "exit": 0
+    },
+    {
+      "file": "src/creature.js",
+      "exit": 0
+    },
+    {
+      "file": "src/film.js",
+      "exit": 0
+    },
+    {
+      "file": "src/genome.js",
+      "exit": 0
+    },
+    {
+      "file": "src/gl-renderer.js",
+      "exit": 0
+    },
+    {
+      "file": "src/heatmap.js",
+      "exit": 0
+    },
+    {
+      "file": "src/lab.js",
+      "exit": 0
+    },
+    {
+      "file": "src/main.js",
+      "exit": 0
+    },
+    {
+      "file": "src/muller.js",
+      "exit": 0
+    },
+    {
+      "file": "src/neat.js",
+      "exit": 0
+    },
+    {
+      "file": "src/netviz.js",
+      "exit": 0
+    },
+    {
+      "file": "src/onboarding.js",
+      "exit": 0
+    },
+    {
+      "file": "src/palette.js",
+      "exit": 0
+    },
+    {
+      "file": "src/persistence.js",
+      "exit": 0
+    },
+    {
+      "file": "src/phylo.js",
+      "exit": 0
+    },
+    {
+      "file": "src/recorder.js",
+      "exit": 0
+    },
+    {
+      "file": "src/render-snapshot.js",
+      "exit": 0
+    },
+    {
+      "file": "src/renderer.js",
+      "exit": 0
+    },
+    {
+      "file": "src/rng.js",
+      "exit": 0
+    },
+    {
+      "file": "src/spatialgrid.js",
+      "exit": 0
+    },
+    {
+      "file": "src/stats.js",
+      "exit": 0
+    },
+    {
+      "file": "src/ui.js",
+      "exit": 0
+    },
+    {
+      "file": "src/vec.js",
+      "exit": 0
+    },
+    {
+      "file": "src/world.js",
+      "exit": 0
+    },
+    {
+      "file": "tools/bench-baseline/camera.js",
+      "exit": 0
+    },
+    {
+      "file": "tools/bench-baseline/gl-renderer.js",
+      "exit": 0
+    },
+    {
+      "file": "tools/bench-baseline/render-snapshot.js",
+      "exit": 0
+    },
+    {
+      "file": "tools/bench.mjs",
+      "exit": 0
+    },
+    {
+      "file": "tools/browser-lab-full.mjs",
+      "exit": 0
+    },
+    {
+      "file": "tools/browser-test.mjs",
+      "exit": 0
+    },
+    {
+      "file": "tools/build-report.mjs",
+      "exit": 0
+    },
+    {
+      "file": "tools/cdp.mjs",
+      "exit": 0
+    },
+    {
+      "file": "tools/core-edge-test.mjs",
+      "exit": 0
+    },
+    {
+      "file": "tools/cut.mjs",
+      "exit": 0
+    },
+    {
+      "file": "tools/evaluate-checkpoints.mjs",
+      "exit": 0
+    },
+    {
+      "file": "tools/find-beats.mjs",
+      "exit": 0
+    },
+    {
+      "file": "tools/fitshare-ab.mjs",
+      "exit": 0
+    },
+    {
+      "file": "tools/headless.mjs",
+      "exit": 0
+    },
+    {
+      "file": "tools/lab-experiment.mjs",
+      "exit": 0
+    },
+    {
+      "file": "tools/make-banner.mjs",
+      "exit": 0
+    },
+    {
+      "file": "tools/make-checkpoints.mjs",
+      "exit": 0
+    },
+    {
+      "file": "tools/metrics-test.mjs",
+      "exit": 0
+    },
+    {
+      "file": "tools/migration-cluster-test.mjs",
+      "exit": 0
+    },
+    {
+      "file": "tools/migration-test.mjs",
+      "exit": 0
+    },
+    {
+      "file": "tools/neat-test.mjs",
+      "exit": 0
+    },
+    {
+      "file": "tools/observer-effect.mjs",
+      "exit": 0
+    },
+    {
+      "file": "tools/render-benchmark.mjs",
+      "exit": 0
+    },
+    {
+      "file": "tools/render-checkpoints.mjs",
+      "exit": 0
+    },
+    {
+      "file": "tools/render-fixture.js",
+      "exit": 0
+    },
+    {
+      "file": "tools/render-test.mjs",
+      "exit": 0
+    },
+    {
+      "file": "tools/render-verify.mjs",
+      "exit": 0
+    },
+    {
+      "file": "tools/replay-lab.mjs",
+      "exit": 0
+    },
+    {
+      "file": "tools/score.mjs",
+      "exit": 0
+    },
+    {
+      "file": "tools/shoot.mjs",
+      "exit": 0
+    },
+    {
+      "file": "tools/ui-capture.mjs",
+      "exit": 0
+    }
+  ],
+  "failures": 0,
+  "finalRechecks": [
+    {
+      "file": "tools/render-benchmark.mjs",
+      "exit": 0,
+      "sha256": "1aa2d91e586f757353177449b3178032b6b90aca952b11306360d5f33eab356d"
+    },
+    {
+      "file": "tools/build-report.mjs",
+      "exit": 0,
+      "sha256": "19e384e4232e8299ea3d57f989db4385e2d540a1b5850cb3ba6554161c9c8e0c"
+    },
+    {
+      "file": "tools/cdp.mjs",
+      "exit": 0,
+      "sha256": "82d1ff259cd16e29150c82a38d64f0cecd3e20302a1a69d7b808411e2450e0fa"
+    }
+  ]
+}

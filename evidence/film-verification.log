@@ -1,0 +1,70 @@
+{
+  "pass": true,
+  "validations": {
+    "duration270": true,
+    "h264": true,
+    "dimensions": true,
+    "encodedFps": true,
+    "encodedFrames": true,
+    "aacStereo": true,
+    "sourceFrames": true,
+    "expectedTickEveryFrame": true,
+    "sixEqualChapters": true,
+    "limitationsAppear": true,
+    "gifSixSeconds": true
+  },
+  "chapterCounts": {
+    "0": 675,
+    "1": 675,
+    "2": 675,
+    "3": 675,
+    "4": 675,
+    "5": 675
+  },
+  "runtime": {
+    "renderer": "WebGL2",
+    "glRenderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)",
+    "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "width": 1280,
+    "height": 720
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/152.0.7977.76",
+    "revision": "@0d89dfa2dd7c1ec4b8a14b9f303f887bb63b6174",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+    "jsVersion": "15.2.124.19"
+  },
+  "video": {
+    "codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": "30/1",
+    "frames": "8100",
+    "duration": "270.000000"
+  },
+  "audio": {
+    "codec": "aac",
+    "channels": 2,
+    "rate": "48000"
+  },
+  "gif": {
+    "duration": "6.000000",
+    "width": 640,
+    "height": 360
+  },
+  "files": {
+    "docs/genesis-film.mp4": {
+      "bytes": 111159969,
+      "sha256": "335ac7697a4a90614ee994fb51eafba554a68e5a65ad501f033c0e8300d39e03"
+    },
+    "docs/genesis-film.srt": {
+      "bytes": 2340,
+      "sha256": "19479b2d775e5e32d1a7235a3f3923457b140c3766158a51b156941d5820664e"
+    },
+    "docs/genesis.gif": {
+      "bytes": 4482203,
+      "sha256": "c7f39d85d147bf5b79fa39908b3f5f7f981704acbe291e80f417a50cf618ddda"
+    }
+  }
+}

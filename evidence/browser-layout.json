@@ -1,0 +1,25 @@
+[
+  {
+    "name": "curated checkpoint startup",
+    "ok": true,
+    "detail": {
+      "tick": 2400,
+      "population": 3858,
+      "historyStart": "TICK 0",
+      "checkpoint": "s42-t2400",
+      "loading": true
+    }
+  },
+  {
+    "name": "390px layout has no horizontal overflow and controls remain reachable",
+    "ok": true,
+    "detail": {
+      "width": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "lab": true,
+      "panel": 390,
+      "scrollHeight": 844
+    }
+  }
+]

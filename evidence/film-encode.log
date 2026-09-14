@@ -1,0 +1,2 @@
+[aist#1:0/pcm_s16le @ 0x8c8c0c480] Guessed Channel Layout: stereo
+{"event":"encoded","output":"<repo>/docs/genesis-film.mp4","gif":"<repo>/docs/genesis.gif","duration":270,"sourceFrames":4050}

@@ -1,0 +1,72 @@
+1
+00:00:00,000 --> 00:00:15,000
+No creature is scripted to follow a path. Each one senses, moves, feeds, and reproduces.
+
+2
+00:00:15,000 --> 00:00:30,000
+This is a living checkpoint: an evolved population, ready to continue from the moment it was saved.
+
+3
+00:00:30,000 --> 00:00:45,000
+A designed artificial ecosystem, not a model of a real habitat.
+
+4
+00:00:45,000 --> 00:01:00,000
+Teal, ochre, and crimson separate genetic diet labels. Species add small variations within each color family.
+
+5
+00:01:00,000 --> 00:01:15,000
+Body shape and energy change what you see. Aging gradually fades an organism before it disappears.
+
+6
+00:01:15,000 --> 00:01:30,000
+Diet colors are genetic labels, not measured energy flows.
+
+7
+00:01:30,000 --> 00:01:45,000
+The ribbon preserves population history. A lineage can grow, branch, shrink, or vanish.
+
+8
+00:01:45,000 --> 00:02:00,000
+Highlight a clade to follow related species across space and time. Rewind the story by loading a checkpoint.
+
+9
+00:02:00,000 --> 00:02:15,000
+The colors in the history ribbon identify lineages; the colors of organisms identify diet labels.
+
+10
+00:02:15,000 --> 00:02:30,000
+The original observer changed species bookkeeping. A short one-species run preserved physical state, while its bookkeeping still changed.
+
+11
+00:02:30,000 --> 00:02:45,000
+Metrics now reads the world without consuming its events. The regression suite varies observation frequency.
+
+12
+00:02:45,000 --> 00:03:00,000
+Checkpoints retain the state needed for continuation, including harvest history and the ordering of resource slots.
+
+13
+00:03:00,000 --> 00:03:15,000
+Begin with one exact checkpoint. Keep a control unchanged. Apply one intervention to the other branch.
+
+14
+00:03:15,000 --> 00:03:30,000
+Reduce food arrivals, increase metabolism, or remove toxin energy loss. Then compare both populations at the same tick.
+
+15
+00:03:30,000 --> 00:03:45,000
+A single-seed intervention is not a general ecological law.
+
+16
+00:03:45,000 --> 00:04:00,000
+These rules create a world worth watching. They do not make a claim about human intelligence or a real ecosystem.
+
+17
+00:04:00,000 --> 00:04:15,000
+Replay equality is tested on the same runtime; cross-engine equality is not guaranteed.
+
+18
+00:04:15,000 --> 00:04:30,000
+Observe. Predict. Intervene. Leave room for the outcome to surprise you.
+

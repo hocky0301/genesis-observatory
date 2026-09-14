@@ -1,0 +1,27 @@
+{
+  "name": "genesis",
+  "version": "2.0.0",
+  "description": "GENESIS — an artificial-life observatory with exact checkpoints and matched ecological interventions.",
+  "type": "module",
+  "scripts": {
+    "start": "node serve.mjs",
+    "dev": "node serve.mjs",
+    "headless": "node tools/headless.mjs",
+    "test": "node tools/core-edge-test.mjs && node tools/metrics-test.mjs && node tools/render-test.mjs && node tools/neat-test.mjs && node tools/migration-test.mjs && node tools/migration-cluster-test.mjs",
+    "test:observer": "node tools/observer-effect.mjs && node tools/observer-effect.mjs --protect && node tools/observer-effect.mjs --fitshare",
+    "bench": "node tools/bench.mjs"
+  },
+  "keywords": [
+    "artificial-life",
+    "evolution",
+    "neural-network",
+    "genetic-algorithm",
+    "simulation",
+    "alife"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  }
+}

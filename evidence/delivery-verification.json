@@ -1,0 +1,37 @@
+{
+  "status": "delivered_with_qualified_performance_evidence",
+  "recordedAt": "2026-09-14",
+  "note": "State at the time of this check. The repository was published on 2026-09-19; the fields below are kept as recorded.",
+  "privateDelivery": true,
+  "publishedOrUploaded": false,
+  "cpuBenchmark": "measured",
+  "rendererPrimaryCases": 3,
+  "rendererBroadCases": 12,
+  "currentWebglPrimaryPass": null,
+  "observedCurrentWebglFpsCriterion": true,
+  "performanceQualification": "All three primary AC cases observed approximately 60 FPS, but each failed at least one background-idle check. Raw samples are retained as rejected for quiet-machine acceptance; a controlled speedup is not established. Earlier battery-era 30 Hz probes are kept separate from the AC comparison.",
+  "filmChecks": {
+    "duration270": true,
+    "h264": true,
+    "dimensions": true,
+    "encodedFps": true,
+    "encodedFrames": true,
+    "aacStereo": true,
+    "sourceFrames": true,
+    "expectedTickEveryFrame": true,
+    "sixEqualChapters": true,
+    "limitationsAppear": true,
+    "gifSixSeconds": true,
+    "audibleUnclipped": true,
+    "gifUnderFiveMB": true
+  },
+  "filmAndCheckpointHashesRecomputed": true,
+  "renderBenchmarkSourceHashesMatchDeliveredFiles": true,
+  "observerAfterModes": [
+    "default",
+    "protect",
+    "fitshare"
+  ],
+  "syntaxFailures": 0,
+  "scope": "Final packaging guard checks finished evidence, artifact hashes and the measured renderer source. Detailed regression and browser evidence remains in the separate records."
+}

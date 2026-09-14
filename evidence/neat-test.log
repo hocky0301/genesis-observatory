@@ -1,0 +1,6 @@
+minimal: conns 32 evalFinite true
+after 400 mutations: hidden 159 conns 408 | maxHidden 159 maxConns 408 | allFinite true
+crossover children evalFinite: true
+distance(a,a): 0.0000 | distance(a,b): 1.614
+
+✅ NEAT engine OK

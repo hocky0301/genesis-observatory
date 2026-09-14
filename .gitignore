@@ -1,0 +1,16 @@
+.DS_Store
+._*
+*.icloud
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+memory/
+*.local
+.env
+.env.*
+
+out/
+runs/
+docs/genesis-film.mp4
+/publication/

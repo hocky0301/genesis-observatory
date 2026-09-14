@@ -1,0 +1,4 @@
+PASS repeated metrics preserves the complete serialized world
+PASS independent samplers report the same birth/death intervals
+PASS migration and extinction keep counts without an observation
+PASS decimated lineage history retains origin/current endpoints and resumes

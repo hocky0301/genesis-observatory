@@ -1,0 +1,360 @@
+{
+  "purpose": "correctness-only; no valid performance claim",
+  "results": [
+    {
+      "case": {
+        "name": "baseline-overview",
+        "backend": "baseline",
+        "zoom": 0.4
+      },
+      "smoke": {
+        "creatureProgramLinked": true,
+        "dotProgramLinked": true,
+        "glError": 0,
+        "renderer": "GLRenderer"
+      }
+    },
+    {
+      "case": {
+        "name": "webgl-overview",
+        "backend": "webgl",
+        "zoom": 0.4
+      },
+      "smoke": {
+        "creatureProgramLinked": true,
+        "dotProgramLinked": true,
+        "glError": 0,
+        "renderer": "GLRenderer"
+      }
+    },
+    {
+      "case": {
+        "name": "webgl-clade",
+        "backend": "webgl",
+        "zoom": 0.4,
+        "clade": true,
+        "ribbon": true
+      },
+      "smoke": {
+        "creatureProgramLinked": true,
+        "dotProgramLinked": true,
+        "glError": 0,
+        "renderer": "GLRenderer"
+      }
+    },
+    {
+      "case": {
+        "name": "webgl-specimen",
+        "backend": "webgl",
+        "zoom": 1.1,
+        "nc": 9,
+        "nf": 0,
+        "nk": 0,
+        "specimen": true
+      },
+      "smoke": {
+        "creatureProgramLinked": true,
+        "dotProgramLinked": true,
+        "glError": 0,
+        "renderer": "GLRenderer"
+      },
+      "pixels": [
+        [
+          85,
+          215,
+          194,
+          255
+        ],
+        [
+          201,
+          159,
+          100,
+          255
+        ],
+        [
+          247,
+          54,
+          78,
+          255
+        ],
+        [
+          85,
+          215,
+          194,
+          255
+        ],
+        [
+          201,
+          159,
+          100,
+          255
+        ],
+        [
+          247,
+          54,
+          78,
+          255
+        ],
+        [
+          41,
+          103,
+          93,
+          122
+        ],
+        [
+          96,
+          76,
+          48,
+          122
+        ],
+        [
+          118,
+          26,
+          37,
+          122
+        ]
+      ]
+    },
+    {
+      "case": {
+        "name": "canvas-specimen",
+        "backend": "canvas",
+        "zoom": 1.1,
+        "nc": 9,
+        "nf": 0,
+        "nk": 0,
+        "specimen": true
+      },
+      "smoke": {
+        "creatureProgramLinked": null,
+        "dotProgramLinked": null,
+        "glError": null,
+        "renderer": "Renderer"
+      },
+      "pixels": [
+        [
+          85,
+          215,
+          194,
+          255
+        ],
+        [
+          201,
+          159,
+          100,
+          255
+        ],
+        [
+          247,
+          54,
+          78,
+          255
+        ],
+        [
+          85,
+          215,
+          194,
+          255
+        ],
+        [
+          201,
+          159,
+          100,
+          255
+        ],
+        [
+          247,
+          54,
+          78,
+          255
+        ],
+        [
+          86,
+          215,
+          194,
+          122
+        ],
+        [
+          201,
+          159,
+          100,
+          122
+        ],
+        [
+          247,
+          54,
+          77,
+          122
+        ]
+      ]
+    },
+    {
+      "case": {
+        "name": "canvas-overview",
+        "backend": "canvas",
+        "zoom": 0.4
+      },
+      "smoke": {
+        "creatureProgramLinked": null,
+        "dotProgramLinked": null,
+        "glError": null,
+        "renderer": "Renderer"
+      }
+    },
+    {
+      "case": {
+        "name": "webgl-custom-threshold",
+        "backend": "webgl",
+        "zoom": 1.1,
+        "nc": 9,
+        "nf": 0,
+        "nk": 0,
+        "specimen": true,
+        "paletteConfig": {
+          "carnivoreThreshold": 0.9,
+          "scavengerLabel": 1.3
+        }
+      },
+      "smoke": {
+        "creatureProgramLinked": true,
+        "dotProgramLinked": true,
+        "glError": 0,
+        "renderer": "GLRenderer"
+      },
+      "pixels": [
+        [
+          85,
+          215,
+          194,
+          255
+        ],
+        [
+          85,
+          215,
+          194,
+          255
+        ],
+        [
+          85,
+          215,
+          194,
+          255
+        ],
+        [
+          85,
+          215,
+          194,
+          255
+        ],
+        [
+          85,
+          215,
+          194,
+          255
+        ],
+        [
+          85,
+          215,
+          194,
+          255
+        ],
+        [
+          41,
+          103,
+          93,
+          122
+        ],
+        [
+          41,
+          103,
+          93,
+          122
+        ],
+        [
+          41,
+          103,
+          93,
+          122
+        ]
+      ]
+    },
+    {
+      "case": {
+        "name": "canvas-custom-threshold",
+        "backend": "canvas",
+        "zoom": 1.1,
+        "nc": 9,
+        "nf": 0,
+        "nk": 0,
+        "specimen": true,
+        "paletteConfig": {
+          "carnivoreThreshold": 0.9,
+          "scavengerLabel": 1.3
+        }
+      },
+      "smoke": {
+        "creatureProgramLinked": null,
+        "dotProgramLinked": null,
+        "glError": null,
+        "renderer": "Renderer"
+      },
+      "pixels": [
+        [
+          85,
+          215,
+          194,
+          255
+        ],
+        [
+          85,
+          215,
+          194,
+          255
+        ],
+        [
+          85,
+          215,
+          194,
+          255
+        ],
+        [
+          85,
+          215,
+          194,
+          255
+        ],
+        [
+          85,
+          215,
+          194,
+          255
+        ],
+        [
+          85,
+          215,
+          194,
+          255
+        ],
+        [
+          86,
+          215,
+          194,
+          122
+        ],
+        [
+          86,
+          215,
+          194,
+          122
+        ],
+        [
+          86,
+          215,
+          194,
+          122
+        ]
+      ]
+    }
+  ],
+  "errors": []
+}

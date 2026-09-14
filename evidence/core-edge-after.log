@@ -1,0 +1,10 @@
+PASS re-splitting a re-enabled connection keeps innovations unique
+PASS completed tick counts each newborn once
+PASS checkpoint preserves every creature field and genome without rounding
+PASS checkpoint preserves indexed resources and free-list order
+PASS checkpoint preserves populated species liveness
+PASS checkpoint never revives a pending cataclysm death
+PASS checkpoint resumes the exact next 12 ticks (default)
+PASS checkpoint resumes the exact next 12 ticks (protect)
+PASS checkpoint resumes the exact next 12 ticks (fitShare)
+{"tests":9,"failures":0,"names":[]}

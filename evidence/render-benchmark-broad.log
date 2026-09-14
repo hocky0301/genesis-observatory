@@ -1,0 +1,13 @@
+22:35  up 1 day, 15:58, 2 users, load averages: 6.09 11.61 13.15
+baseline zoom=0.25 ribbon=false clade=false p50=60.01 fps cpu=0.600 ms accepted=false backgroundIdle=48.36/69.40%
+webgl zoom=0.25 ribbon=false clade=false p50=60.01 fps cpu=0.215 ms accepted=false backgroundIdle=74.39/74.59%
+baseline zoom=0.4 ribbon=false clade=false p50=60.01 fps cpu=0.705 ms accepted=false backgroundIdle=73.12/75.61%
+webgl zoom=0.4 ribbon=false clade=false p50=60.01 fps cpu=0.185 ms accepted=true backgroundIdle=76.62/76.12%
+baseline zoom=0.9 ribbon=false clade=false p50=60.01 fps cpu=0.540 ms accepted=false backgroundIdle=75.12/72.33%
+webgl zoom=0.9 ribbon=false clade=false p50=60.01 fps cpu=0.130 ms accepted=false backgroundIdle=70.11/79.78%
+webgl zoom=0.25 ribbon=true clade=true p50=60.01 fps cpu=1.785 ms accepted=false backgroundIdle=79.54/73.01%
+webgl zoom=0.4 ribbon=true clade=true p50=60.01 fps cpu=1.685 ms accepted=false backgroundIdle=72.14/77.54%
+webgl zoom=0.9 ribbon=true clade=true p50=60.01 fps cpu=1.665 ms accepted=false backgroundIdle=77.68/63.98%
+canvas zoom=0.25 ribbon=true clade=true p50=60.01 fps cpu=15.500 ms accepted=false backgroundIdle=73.08/77.10%
+canvas zoom=0.4 ribbon=true clade=true p50=60.01 fps cpu=14.275 ms accepted=false backgroundIdle=74.59/78.19%
+canvas zoom=0.9 ribbon=true clade=true p50=60.01 fps cpu=6.230 ms accepted=false backgroundIdle=69.89/69.89%

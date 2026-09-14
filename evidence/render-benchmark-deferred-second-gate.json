@@ -1,0 +1,12 @@
+{
+  "status": "deferred",
+  "mode": "focus",
+  "scope": "Fixed camera zoom 0.4: original WebGL, current WebGL, current WebGL with clade and synthetic ribbon. Canvas only when --fallback is supplied.",
+  "reason": "1-minute load average exceeds 3",
+  "uptime": "22:12  up 1 day, 15:36, 2 users, load averages: 4.38 4.49 5.53",
+  "loadavg": [
+    4.3759765625,
+    4.490234375,
+    5.52587890625
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "film-remainder",
+  "duration": 270,
+  "sourceFps": 15,
+  "ticksPerFrame": 1,
+  "checkpoints": [
+    "/checkpoints/s42-t1200-90ff55b9823f.json.gz",
+    "/checkpoints/s42-t2400-73af0d719bc3.json.gz",
+    "/checkpoints/s42-t9000-94135a708fc4.json.gz",
+    "/checkpoints/s42-t1200-90ff55b9823f.json.gz",
+    "/checkpoints/s42-t1200-90ff55b9823f.json.gz",
+    "/checkpoints/s42-t9000-94135a708fc4.json.gz"
+  ],
+  "labResults": "/evidence/lab-results.json",
+  "frames": 2700,
+  "startFrame": 1350
+}

@@ -1,0 +1,12 @@
+OK 13-float layout capacity and all offsets
+OK round trip includes age, scavenging, current living species
+OK legacy array and map access preserve values; direct lookup handles absent ids
+OK transient creature overflow cannot overwrite food/carrion regions
+OK invalid header is rejected before renderer reads beyond bytes
+OK strict category thresholds and carnivore priority match configurable behaviour
+OK palette bounds, energy brightness and age fading
+OK camera picks packed ids without requesting legacy object allocation
+OK descendant traversal includes nested children and survives malformed cycles
+OK Muller hit test follows actual nonuniform tick spacing
+OK Muller highlight never strokes zero-abundance pre-birth history
+11 render contracts passed

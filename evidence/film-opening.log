@@ -1,0 +1,25 @@
+{"event":"capture-start","runtime":{"renderer":"WebGL2","glRenderer":"ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)","version":"WebGL 2.0 (OpenGL ES 3.0 Chromium)","width":1280,"height":720},"spec":"<repo>/shots/film-opening.json","out":"<repo>/out/film-opening"}
+{"event":"frames","done":60,"total":1350,"tick":1260}
+{"event":"frames","done":120,"total":1350,"tick":1320}
+{"event":"frames","done":180,"total":1350,"tick":1380}
+{"event":"frames","done":240,"total":1350,"tick":1440}
+{"event":"frames","done":300,"total":1350,"tick":1500}
+{"event":"frames","done":360,"total":1350,"tick":1560}
+{"event":"frames","done":420,"total":1350,"tick":1620}
+{"event":"frames","done":480,"total":1350,"tick":1680}
+{"event":"frames","done":540,"total":1350,"tick":1740}
+{"event":"frames","done":600,"total":1350,"tick":1800}
+{"event":"frames","done":660,"total":1350,"tick":1860}
+{"event":"frames","done":720,"total":1350,"tick":2445}
+{"event":"frames","done":780,"total":1350,"tick":2505}
+{"event":"frames","done":840,"total":1350,"tick":2565}
+{"event":"frames","done":900,"total":1350,"tick":2625}
+{"event":"frames","done":960,"total":1350,"tick":2685}
+{"event":"frames","done":1020,"total":1350,"tick":2745}
+{"event":"frames","done":1080,"total":1350,"tick":2805}
+{"event":"frames","done":1140,"total":1350,"tick":2865}
+{"event":"frames","done":1200,"total":1350,"tick":2925}
+{"event":"frames","done":1260,"total":1350,"tick":2985}
+{"event":"frames","done":1320,"total":1350,"tick":3045}
+{"event":"frames","done":1350,"total":1350,"tick":3075}
+{"event":"complete","frames":1350,"manifest":"<repo>/out/film-opening/manifest.json"}

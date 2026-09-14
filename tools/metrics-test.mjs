@@ -1,0 +1,26 @@
+import assert from 'node:assert/strict';
+import {CONFIG} from '../src/config.js';
+import {World} from '../src/world.js';
+import {Stats} from '../src/stats.js';
+Object.assign(CONFIG,{seed:'pure-metrics',startPopulation:30,maxPopulation:120,startFood:300,maxFood:700,maxCarrion:100,width:700,height:700,foodRate:10,maturity:2,reproduceThreshold:100,speciesThreshold:0.35});
+const w=new World();for(let i=0;i<30;i++)w.step(1);
+const before=JSON.stringify(w.toState()), a=w.metrics(), b=w.metrics();
+assert.deepEqual(a,b);assert.equal(JSON.stringify(w.toState()),before);
+console.log('PASS repeated metrics preserves the complete serialized world');
+const x=new Stats(), y=new Stats();assert.deepEqual(x.sample(w),y.sample(w));
+for(let i=0;i<10;i++)w.step(1);
+w.metrics();w.metrics();assert.deepEqual(x.sample(w),y.sample(w));
+assert.equal(x.last.births,w._birthsTotal-a.birthsTotal);
+console.log('PASS independent samplers report the same birth/death intervals');
+const id=w.creatures[0].speciesId, n=w.creatures.length;
+w.emigrate(w.creatures[0]);
+assert.equal([...w.species.values()].reduce((s,v)=>s+v.count,0),n-1);
+w.cataclysm(1);w.step(1);assert.equal(w.metrics().population,0);
+assert.equal([...w.species.values()].filter(s=>s.alive).length,0);
+console.log('PASS migration and extinction keep counts without an observation');
+const h=new Stats();
+for(let tick=0;tick<1500;tick++){w.tick=tick;h.sample(w);}
+assert.equal(h.historyTicks[0],0);assert.equal(h.historyTicks.at(-1),1499);assert.ok(h.historyTicks.length<=640);
+for(const row of h.fullSpeciesHistory.values())assert.equal(row.length,h.historyTicks.length);
+const restored=new Stats();restored.fromJSON(JSON.parse(JSON.stringify(h.toJSON())));assert.deepEqual(restored.toJSON(),h.toJSON());
+console.log('PASS decimated lineage history retains origin/current endpoints and resumes');

@@ -1,0 +1,814 @@
+{
+  "scope": "One real Chromium form experiment from curated s42-t1200, food-half, 1800 ticks. Cross-runtime agreement is an observation, not a guarantee.",
+  "checks": [
+    "Prediction locked before branch execution",
+    "Both live worker branches ended at tick 3000; original source stayed at 1200",
+    "Control and intervention population match the independently recorded Node experiment; prediction error and intervention effect match arithmetic",
+    "Both outcome view controls work and return preserves the source checkpoint"
+  ],
+  "start": {
+    "tick": 1200,
+    "seed": "42",
+    "paused": true,
+    "checkpoint": "s42-t1200"
+  },
+  "actual": {
+    "plan": {
+      "schemaVersion": 1,
+      "intervention": "food-half",
+      "title": "Food arrival \u00d7 0.5",
+      "prediction": 2500,
+      "startTick": 1200,
+      "ticks": 1800,
+      "targetTick": 3000,
+      "config": {
+        "width": 3200,
+        "height": 2100,
+        "seed": "42",
+        "nIn": 16,
+        "nOut": 2,
+        "sensorCount": 3,
+        "neat": {
+          "weightMutRate": 0.8,
+          "weightStep": 0.18,
+          "weightReplaceChance": 0.07,
+          "toggleChance": 0.03,
+          "addConnChance": 0.3,
+          "addNodeChance": 0.12
+        },
+        "speciesThreshold": 0.9,
+        "startPopulation": 400,
+        "maxPopulation": 8000,
+        "startFood": 7500,
+        "maxFood": 16000,
+        "foodRate": 95,
+        "foodEnergy": 28,
+        "foodDecay": 280,
+        "toxinFraction": 0.4,
+        "toxinEnergy": 22,
+        "bloomCount": 14,
+        "bloomFraction": 0.82,
+        "bloomSpread": 110,
+        "maxEnergy": 200,
+        "baseMetabolism": 0.045,
+        "moveMetabolism": 0.0065,
+        "startEnergy": 110,
+        "maturity": 50,
+        "maxAge": 2000,
+        "eatRadius": 7,
+        "reproduceThreshold": 165,
+        "reproduceCost": 95,
+        "childEnergyShare": 0.62,
+        "protect": false,
+        "protectShare": 0.06,
+        "protectMin": 0.9,
+        "fitShare": false,
+        "fitAlpha": 0.02,
+        "fitShareMin": 0.8,
+        "fitShareMax": 1.15,
+        "fitShareGain": 1,
+        "epsShare": 0.001,
+        "mutationRate": 0.16,
+        "mutationStep": 0.22,
+        "bigMutationChance": 0.03,
+        "carnivoreThreshold": 0.5,
+        "scavengerLabel": 0.95,
+        "predationSizeEdge": 1.12,
+        "meatFromEnergy": 0.55,
+        "meatPerSize": 20,
+        "maxCarrion": 5800,
+        "carrionPerSize": 30,
+        "carrionFromEnergy": 0.5,
+        "carrionBite": 22,
+        "carrionDecay": 1100,
+        "predationLeftover": 0.45,
+        "sexualChance": 0.5,
+        "mateRadius": 64,
+        "maxTurn": 0.32,
+        "speedRef": 3.2,
+        "statsEvery": 8,
+        "historyPoints": 320
+      },
+      "patch": {
+        "foodRate": 47.5
+      }
+    },
+    "result": {
+      "prediction": 2500,
+      "actual": 2340,
+      "control": 4404,
+      "signedError": 160,
+      "absoluteError": 160,
+      "relativeError": 0.06837606837606838,
+      "populationEffect": -2064,
+      "relativeEffect": -0.46866485013623976
+    },
+    "commands": [
+      {
+        "branch": "control",
+        "command": "load-checkpoint",
+        "tick": 1200
+      },
+      {
+        "branch": "control",
+        "command": "step",
+        "n": 1800,
+        "stats": false,
+        "targetTick": 3000
+      },
+      {
+        "branch": "intervention",
+        "command": "load-checkpoint",
+        "tick": 1200
+      },
+      {
+        "branch": "intervention",
+        "command": "config",
+        "tick": 1200,
+        "key": "foodRate",
+        "value": 47.5
+      },
+      {
+        "branch": "intervention",
+        "command": "step",
+        "n": 1800,
+        "stats": false,
+        "targetTick": 3000
+      }
+    ],
+    "control": {
+      "tick": 3000,
+      "population": 4404,
+      "food": 13751,
+      "carrion": 626,
+      "maxGen": 29,
+      "avgGen": 16.783151680290644,
+      "avgEnergy": 75.87505640155777,
+      "avgEaten": 196.51604866755997,
+      "avgAge": 611.6337420526794,
+      "avgDiet": 0.19013936377990506,
+      "avgSpeed": 3.403418173896998,
+      "avgSize": 1.6634423208275766,
+      "carnivores": 909,
+      "herbivores": 3279,
+      "scavengers": 216,
+      "avgConns": 31.587874659400544,
+      "avgHidden": 0.7806539509536785,
+      "avgAddedConns": -0.4121253405994558,
+      "species": 10,
+      "diversity": 0.8115483813232134,
+      "birthsTotal": 13319,
+      "deathsTotal": 9315
+    },
+    "intervention": {
+      "tick": 3000,
+      "population": 2340,
+      "food": 7486,
+      "carrion": 426,
+      "maxGen": 23,
+      "avgGen": 13.81880341880342,
+      "avgEnergy": 78.29969541357256,
+      "avgEaten": 212.00612161099164,
+      "avgAge": 807.0837606837607,
+      "avgDiet": 0.2018842756117865,
+      "avgSpeed": 3.3178980060961596,
+      "avgSize": 1.6144940183618608,
+      "carnivores": 491,
+      "herbivores": 1816,
+      "scavengers": 33,
+      "avgConns": 32.3,
+      "avgHidden": 0.8632478632478633,
+      "avgAddedConns": 0.29999999999999716,
+      "species": 8,
+      "diversity": 0.7715740078612515,
+      "birthsTotal": 8124,
+      "deathsTotal": 6184
+    },
+    "controlSamples": [
+      {
+        "tick": 1200,
+        "population": 2846
+      },
+      {
+        "tick": 1224,
+        "population": 2879
+      },
+      {
+        "tick": 1248,
+        "population": 2934
+      },
+      {
+        "tick": 1272,
+        "population": 2979
+      },
+      {
+        "tick": 1296,
+        "population": 3027
+      },
+      {
+        "tick": 1320,
+        "population": 3085
+      },
+      {
+        "tick": 1344,
+        "population": 3133
+      },
+      {
+        "tick": 1368,
+        "population": 3189
+      },
+      {
+        "tick": 1392,
+        "population": 3246
+      },
+      {
+        "tick": 1416,
+        "population": 3272
+      },
+      {
+        "tick": 1440,
+        "population": 3325
+      },
+      {
+        "tick": 1464,
+        "population": 3355
+      },
+      {
+        "tick": 1488,
+        "population": 3410
+      },
+      {
+        "tick": 1512,
+        "population": 3464
+      },
+      {
+        "tick": 1536,
+        "population": 3503
+      },
+      {
+        "tick": 1560,
+        "population": 3546
+      },
+      {
+        "tick": 1584,
+        "population": 3577
+      },
+      {
+        "tick": 1608,
+        "population": 3612
+      },
+      {
+        "tick": 1632,
+        "population": 3621
+      },
+      {
+        "tick": 1656,
+        "population": 3646
+      },
+      {
+        "tick": 1680,
+        "population": 3655
+      },
+      {
+        "tick": 1704,
+        "population": 3673
+      },
+      {
+        "tick": 1728,
+        "population": 3681
+      },
+      {
+        "tick": 1752,
+        "population": 3675
+      },
+      {
+        "tick": 1776,
+        "population": 3672
+      },
+      {
+        "tick": 1800,
+        "population": 3669
+      },
+      {
+        "tick": 1824,
+        "population": 3691
+      },
+      {
+        "tick": 1848,
+        "population": 3683
+      },
+      {
+        "tick": 1872,
+        "population": 3684
+      },
+      {
+        "tick": 1896,
+        "population": 3686
+      },
+      {
+        "tick": 1920,
+        "population": 3656
+      },
+      {
+        "tick": 1944,
+        "population": 3662
+      },
+      {
+        "tick": 1968,
+        "population": 3655
+      },
+      {
+        "tick": 1992,
+        "population": 3676
+      },
+      {
+        "tick": 2016,
+        "population": 3653
+      },
+      {
+        "tick": 2040,
+        "population": 3664
+      },
+      {
+        "tick": 2064,
+        "population": 3691
+      },
+      {
+        "tick": 2088,
+        "population": 3691
+      },
+      {
+        "tick": 2112,
+        "population": 3719
+      },
+      {
+        "tick": 2136,
+        "population": 3773
+      },
+      {
+        "tick": 2160,
+        "population": 3783
+      },
+      {
+        "tick": 2184,
+        "population": 3784
+      },
+      {
+        "tick": 2208,
+        "population": 3825
+      },
+      {
+        "tick": 2232,
+        "population": 3840
+      },
+      {
+        "tick": 2256,
+        "population": 3857
+      },
+      {
+        "tick": 2280,
+        "population": 3851
+      },
+      {
+        "tick": 2304,
+        "population": 3854
+      },
+      {
+        "tick": 2328,
+        "population": 3845
+      },
+      {
+        "tick": 2352,
+        "population": 3865
+      },
+      {
+        "tick": 2376,
+        "population": 3876
+      },
+      {
+        "tick": 2400,
+        "population": 3858
+      },
+      {
+        "tick": 2424,
+        "population": 3874
+      },
+      {
+        "tick": 2448,
+        "population": 3875
+      },
+      {
+        "tick": 2472,
+        "population": 3875
+      },
+      {
+        "tick": 2496,
+        "population": 3879
+      },
+      {
+        "tick": 2520,
+        "population": 3900
+      },
+      {
+        "tick": 2544,
+        "population": 3883
+      },
+      {
+        "tick": 2568,
+        "population": 3875
+      },
+      {
+        "tick": 2592,
+        "population": 3885
+      },
+      {
+        "tick": 2616,
+        "population": 3897
+      },
+      {
+        "tick": 2640,
+        "population": 3939
+      },
+      {
+        "tick": 2664,
+        "population": 3964
+      },
+      {
+        "tick": 2688,
+        "population": 4017
+      },
+      {
+        "tick": 2712,
+        "population": 4038
+      },
+      {
+        "tick": 2736,
+        "population": 4074
+      },
+      {
+        "tick": 2760,
+        "population": 4120
+      },
+      {
+        "tick": 2784,
+        "population": 4126
+      },
+      {
+        "tick": 2808,
+        "population": 4157
+      },
+      {
+        "tick": 2832,
+        "population": 4212
+      },
+      {
+        "tick": 2856,
+        "population": 4245
+      },
+      {
+        "tick": 2880,
+        "population": 4264
+      },
+      {
+        "tick": 2904,
+        "population": 4303
+      },
+      {
+        "tick": 2928,
+        "population": 4334
+      },
+      {
+        "tick": 2952,
+        "population": 4362
+      },
+      {
+        "tick": 2976,
+        "population": 4384
+      },
+      {
+        "tick": 3000,
+        "population": 4404
+      }
+    ],
+    "interventionSamples": [
+      {
+        "tick": 1200,
+        "population": 2846
+      },
+      {
+        "tick": 1224,
+        "population": 2858
+      },
+      {
+        "tick": 1248,
+        "population": 2874
+      },
+      {
+        "tick": 1272,
+        "population": 2879
+      },
+      {
+        "tick": 1296,
+        "population": 2886
+      },
+      {
+        "tick": 1320,
+        "population": 2893
+      },
+      {
+        "tick": 1344,
+        "population": 2905
+      },
+      {
+        "tick": 1368,
+        "population": 2910
+      },
+      {
+        "tick": 1392,
+        "population": 2925
+      },
+      {
+        "tick": 1416,
+        "population": 2925
+      },
+      {
+        "tick": 1440,
+        "population": 2938
+      },
+      {
+        "tick": 1464,
+        "population": 2939
+      },
+      {
+        "tick": 1488,
+        "population": 2921
+      },
+      {
+        "tick": 1512,
+        "population": 2895
+      },
+      {
+        "tick": 1536,
+        "population": 2884
+      },
+      {
+        "tick": 1560,
+        "population": 2876
+      },
+      {
+        "tick": 1584,
+        "population": 2859
+      },
+      {
+        "tick": 1608,
+        "population": 2818
+      },
+      {
+        "tick": 1632,
+        "population": 2794
+      },
+      {
+        "tick": 1656,
+        "population": 2768
+      },
+      {
+        "tick": 1680,
+        "population": 2745
+      },
+      {
+        "tick": 1704,
+        "population": 2729
+      },
+      {
+        "tick": 1728,
+        "population": 2701
+      },
+      {
+        "tick": 1752,
+        "population": 2648
+      },
+      {
+        "tick": 1776,
+        "population": 2625
+      },
+      {
+        "tick": 1800,
+        "population": 2573
+      },
+      {
+        "tick": 1824,
+        "population": 2548
+      },
+      {
+        "tick": 1848,
+        "population": 2536
+      },
+      {
+        "tick": 1872,
+        "population": 2507
+      },
+      {
+        "tick": 1896,
+        "population": 2477
+      },
+      {
+        "tick": 1920,
+        "population": 2470
+      },
+      {
+        "tick": 1944,
+        "population": 2435
+      },
+      {
+        "tick": 1968,
+        "population": 2429
+      },
+      {
+        "tick": 1992,
+        "population": 2428
+      },
+      {
+        "tick": 2016,
+        "population": 2406
+      },
+      {
+        "tick": 2040,
+        "population": 2377
+      },
+      {
+        "tick": 2064,
+        "population": 2360
+      },
+      {
+        "tick": 2088,
+        "population": 2355
+      },
+      {
+        "tick": 2112,
+        "population": 2338
+      },
+      {
+        "tick": 2136,
+        "population": 2330
+      },
+      {
+        "tick": 2160,
+        "population": 2322
+      },
+      {
+        "tick": 2184,
+        "population": 2313
+      },
+      {
+        "tick": 2208,
+        "population": 2309
+      },
+      {
+        "tick": 2232,
+        "population": 2287
+      },
+      {
+        "tick": 2256,
+        "population": 2281
+      },
+      {
+        "tick": 2280,
+        "population": 2289
+      },
+      {
+        "tick": 2304,
+        "population": 2287
+      },
+      {
+        "tick": 2328,
+        "population": 2295
+      },
+      {
+        "tick": 2352,
+        "population": 2298
+      },
+      {
+        "tick": 2376,
+        "population": 2303
+      },
+      {
+        "tick": 2400,
+        "population": 2280
+      },
+      {
+        "tick": 2424,
+        "population": 2266
+      },
+      {
+        "tick": 2448,
+        "population": 2262
+      },
+      {
+        "tick": 2472,
+        "population": 2255
+      },
+      {
+        "tick": 2496,
+        "population": 2252
+      },
+      {
+        "tick": 2520,
+        "population": 2245
+      },
+      {
+        "tick": 2544,
+        "population": 2250
+      },
+      {
+        "tick": 2568,
+        "population": 2257
+      },
+      {
+        "tick": 2592,
+        "population": 2278
+      },
+      {
+        "tick": 2616,
+        "population": 2282
+      },
+      {
+        "tick": 2640,
+        "population": 2289
+      },
+      {
+        "tick": 2664,
+        "population": 2292
+      },
+      {
+        "tick": 2688,
+        "population": 2298
+      },
+      {
+        "tick": 2712,
+        "population": 2318
+      },
+      {
+        "tick": 2736,
+        "population": 2304
+      },
+      {
+        "tick": 2760,
+        "population": 2305
+      },
+      {
+        "tick": 2784,
+        "population": 2321
+      },
+      {
+        "tick": 2808,
+        "population": 2319
+      },
+      {
+        "tick": 2832,
+        "population": 2318
+      },
+      {
+        "tick": 2856,
+        "population": 2313
+      },
+      {
+        "tick": 2880,
+        "population": 2327
+      },
+      {
+        "tick": 2904,
+        "population": 2332
+      },
+      {
+        "tick": 2928,
+        "population": 2325
+      },
+      {
+        "tick": 2952,
+        "population": 2337
+      },
+      {
+        "tick": 2976,
+        "population": 2339
+      },
+      {
+        "tick": 3000,
+        "population": 2340
+      }
+    ],
+    "sourceTick": 1200,
+    "status": "A single-seed intervention is not a general ecological law.",
+    "errorCopy": "Your prediction was high by 160 organisms (6.8% of the outcome).",
+    "effectCopy": "Intervention \u2212 control: -2,064 organisms (-46.9%). Same start, same tick, one changed pressure."
+  },
+  "comparison": {
+    "nodeRuntime": "v22.11.0",
+    "browserRuntime": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+    "controlDifferences": [],
+    "interventionDifferences": [],
+    "referenceEvidence": "evidence/lab-results.json",
+    "referenceCheckpointSHA256": "90ff55b9823f358b5ebe70401ae38ebfbd5d54acbd17a2b1a6e5ee415c321cca"
+  },
+  "uncaught": [],
+  "status": "PASS"
+}

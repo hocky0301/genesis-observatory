@@ -1,0 +1,379 @@
+{
+  "checks": [
+    {
+      "name": "recording does not autonomously step",
+      "ok": true,
+      "detail": {
+        "tick": 0
+      }
+    },
+    {
+      "name": "valid exact checkpoint, configuration, and full history load",
+      "ok": true,
+      "detail": {
+        "tick": 40,
+        "history": [
+          0,
+          4,
+          8,
+          12,
+          16,
+          20,
+          24,
+          28,
+          32,
+          36,
+          40
+        ],
+        "foodRate": 2
+      }
+    },
+    {
+      "name": "loaded thresholds reach renderer uniforms and inspector labels",
+      "ok": true,
+      "detail": {
+        "uniform": -1,
+        "age": 777,
+        "effective": -1,
+        "inspector": "generation1species#1nichecarnivoreage40energy107harvested0brain0n · 32ckills0size1.61max speed2.57vision94scavenge0.50"
+      }
+    },
+    {
+      "name": "verified gzip checkpoint decodes and rejects altered checksum",
+      "ok": true,
+      "detail": {
+        "tick": 40,
+        "version": 4,
+        "corrupt": "Checkpoint checksum mismatch"
+      }
+    },
+    {
+      "name": "missing checkpoint reports actionable download failure",
+      "ok": true,
+      "detail": "Checkpoint download failed (404)"
+    },
+    {
+      "name": "setCamera changes the real camera",
+      "ok": true,
+      "detail": {
+        "cx": 123,
+        "cy": 234,
+        "zoom": 0.9
+      }
+    },
+    {
+      "name": "step acknowledgement contains exact snapshot tick",
+      "ok": true,
+      "detail": {
+        "tick": 43,
+        "metrics": {
+          "tick": 43,
+          "population": 20,
+          "food": 141,
+          "carrion": 0,
+          "maxGen": 1,
+          "avgGen": 1,
+          "avgEnergy": 106.99653633052901,
+          "avgEaten": 2.616274927556515,
+          "avgAge": 43,
+          "avgDiet": 0.07424973073648289,
+          "avgSpeed": 2.492852848656475,
+          "avgSize": 1.0568316067988053,
+          "carnivores": 0,
+          "herbivores": 20,
+          "scavengers": 0,
+          "avgConns": 32,
+          "avgHidden": 0,
+          "avgAddedConns": 0,
+          "species": 1,
+          "diversity": 0.8061330933532382,
+          "birthsTotal": 0,
+          "deathsTotal": 0
+        }
+      }
+    },
+    {
+      "name": "checkpoint replay preserves exact state in browser runtime",
+      "ok": true,
+      "detail": true
+    },
+    {
+      "name": "Muller origin is retained and clade band selection works",
+      "ok": true,
+      "detail": {
+        "hit": 1,
+        "selected": 1,
+        "highlight": [
+          1
+        ]
+      }
+    },
+    {
+      "name": "guided observation can be restarted and taken over",
+      "ok": true,
+      "detail": {
+        "shown": true,
+        "title": "Read the three colors.",
+        "hidden": true
+      }
+    },
+    {
+      "name": "Ecology Lab requires and locks a prediction",
+      "ok": true,
+      "detail": {
+        "valid": false,
+        "defaultTicks": "1800"
+      }
+    },
+    {
+      "name": "Ecology Lab completes two isolated branches at exact target",
+      "ok": true,
+      "detail": {
+        "plan": {
+          "schemaVersion": 1,
+          "intervention": "food-half",
+          "title": "Food arrival × 0.5",
+          "prediction": 15,
+          "startTick": 40,
+          "ticks": 13,
+          "targetTick": 53,
+          "config": {
+            "width": 600,
+            "height": 400,
+            "seed": "browser-acceptance",
+            "nIn": 16,
+            "nOut": 2,
+            "sensorCount": 3,
+            "neat": {
+              "weightMutRate": 0.8,
+              "weightStep": 0.18,
+              "weightReplaceChance": 0.07,
+              "toggleChance": 0.03,
+              "addConnChance": 0.3,
+              "addNodeChance": 0.12
+            },
+            "speciesThreshold": 0.9,
+            "startPopulation": 20,
+            "maxPopulation": 100,
+            "startFood": 60,
+            "maxFood": 150,
+            "foodRate": 2,
+            "foodEnergy": 28,
+            "foodDecay": 280,
+            "toxinFraction": 0.4,
+            "toxinEnergy": 22,
+            "bloomCount": 3,
+            "bloomFraction": 0.82,
+            "bloomSpread": 110,
+            "maxEnergy": 200,
+            "baseMetabolism": 0.045,
+            "moveMetabolism": 0.0065,
+            "startEnergy": 110,
+            "maturity": 50,
+            "maxAge": 2000,
+            "eatRadius": 7,
+            "reproduceThreshold": 165,
+            "reproduceCost": 95,
+            "childEnergyShare": 0.62,
+            "protect": false,
+            "protectShare": 0.06,
+            "protectMin": 0.9,
+            "fitShare": false,
+            "fitAlpha": 0.02,
+            "fitShareMin": 0.8,
+            "fitShareMax": 1.15,
+            "fitShareGain": 1,
+            "epsShare": 0.001,
+            "mutationRate": 0.16,
+            "mutationStep": 0.22,
+            "bigMutationChance": 0.03,
+            "carnivoreThreshold": 0.5,
+            "scavengerLabel": 0.95,
+            "predationSizeEdge": 1.12,
+            "meatFromEnergy": 0.55,
+            "meatPerSize": 20,
+            "maxCarrion": 50,
+            "carrionPerSize": 30,
+            "carrionFromEnergy": 0.5,
+            "carrionBite": 22,
+            "carrionDecay": 1100,
+            "predationLeftover": 0.45,
+            "sexualChance": 0.5,
+            "mateRadius": 64,
+            "maxTurn": 0.32,
+            "speedRef": 3.2,
+            "statsEvery": 4,
+            "historyPoints": 320
+          },
+          "patch": {
+            "foodRate": 1
+          }
+        },
+        "result": {
+          "prediction": 15,
+          "actual": 20,
+          "control": 20,
+          "signedError": -5,
+          "absoluteError": 5,
+          "relativeError": 0.25,
+          "populationEffect": 0,
+          "relativeEffect": 0
+        },
+        "ticks": [
+          53,
+          53
+        ],
+        "commands": [
+          {
+            "branch": "control",
+            "command": "load-checkpoint",
+            "tick": 40
+          },
+          {
+            "branch": "control",
+            "command": "step",
+            "n": 13,
+            "stats": false,
+            "targetTick": 53
+          },
+          {
+            "branch": "intervention",
+            "command": "load-checkpoint",
+            "tick": 40
+          },
+          {
+            "branch": "intervention",
+            "command": "config",
+            "tick": 40,
+            "key": "foodRate",
+            "value": 1
+          },
+          {
+            "branch": "intervention",
+            "command": "step",
+            "n": 13,
+            "stats": false,
+            "targetTick": 53
+          }
+        ],
+        "mainTick": 40
+      }
+    },
+    {
+      "name": "experiment export includes checkpoint, config, prediction, and trace",
+      "ok": true,
+      "detail": {
+        "hash": "df1384f4a1e3ac311c17ffe78767bf84f0be4fbb8e2151d99400f12df257e157",
+        "prediction": 15,
+        "config": 2,
+        "tick": 40,
+        "commands": 5
+      }
+    },
+    {
+      "name": "exported browser experiment replays with verified checksum and outcomes",
+      "ok": true,
+      "detail": {
+        "status": "EXACT",
+        "targetTick": 53,
+        "fields": 22
+      }
+    },
+    {
+      "name": "all three interventions are explicit and preserve baseline",
+      "ok": true,
+      "detail": {
+        "metabolism": {
+          "baseMetabolism": 0.09,
+          "moveMetabolism": 0.013
+        },
+        "toxin": 0
+      }
+    },
+    {
+      "name": "experiment cancellation releases controls and source world",
+      "ok": true,
+      "detail": {
+        "message": "Experiment cancelled",
+        "tick": 40
+      }
+    },
+    {
+      "name": "invalid uploaded state reports error without hanging",
+      "ok": true,
+      "detail": "Invalid world checkpoint"
+    },
+    {
+      "name": "readback returns actual nonempty WebGL pixels",
+      "ok": true,
+      "detail": {
+        "width": 1086,
+        "height": 714,
+        "nonzero": true,
+        "backend": "GLRenderer"
+      }
+    },
+    {
+      "name": "reset restores the source seed and clears selected clade",
+      "ok": true,
+      "detail": {
+        "tick": 0,
+        "seed": "browser-acceptance",
+        "clade": null
+      }
+    },
+    {
+      "name": "Canvas query switches the real rendering backend",
+      "ok": true,
+      "detail": {
+        "backend": "Renderer",
+        "nonzero": true
+      }
+    },
+    {
+      "name": "scratch URL starts requested seed without loading curated state",
+      "ok": true,
+      "detail": {
+        "tick": 0,
+        "seed": "scratch-test",
+        "choice": "scratch",
+        "paused": true
+      }
+    },
+    {
+      "name": "independent islands keep separate workers, seeds, and render configs",
+      "ok": true,
+      "detail": {
+        "seeds": [
+          "two-worlds-0",
+          "two-worlds-1"
+        ],
+        "workers": true,
+        "heights": [
+          712,
+          712
+        ],
+        "configs": [
+          36,
+          36
+        ]
+      }
+    },
+    {
+      "name": "Transferable fallback works without isolation headers",
+      "ok": true,
+      "detail": {
+        "isolated": false,
+        "sab": false,
+        "badge": "TRANSFER BUFFERS",
+        "tick": 42
+      }
+    },
+    {
+      "name": "no uncaught browser exceptions",
+      "ok": true,
+      "detail": []
+    }
+  ],
+  "uncaught": []
+}

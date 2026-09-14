@@ -1,0 +1,36 @@
+{
+  "status": "deferred",
+  "mode": "focus",
+  "scope": "Fixed camera zoom 0.4: original WebGL, current WebGL, current WebGL with clade and synthetic ribbon. Canvas only when --fallback is supplied.",
+  "protocol": {
+    "version": 2,
+    "label": "measured-with-CPU-idle-gate",
+    "minimumBackgroundIdlePercent": 75,
+    "backgroundProbeSeconds": 5,
+    "rule": "Aggregate CPU idle must be at least 75% for five seconds immediately before each case and for five seconds after rendering stops. During-case CPU and all load averages are reported, not admission gates.",
+    "reason": "The absolute one-minute load gate rejected a completed original-renderer measurement although background CPU probes were about 87% idle across 12 cores. The measured renderer contributes to during-case load. This alternative was declared prospectively; rejected v1 samples remain separate.",
+    "ownership": "Root confirmed all owned production, simulation, media, browser and packaging jobs closed; unrelated user processes remain untouched."
+  },
+  "reason": "Background CPU idle below 75%",
+  "uptime": "22:29  up 1 day, 15:53, 2 users, load averages: 11.72 23.32 16.67",
+  "loadavg": [
+    11.724609375,
+    23.3203125,
+    16.66748046875
+  ],
+  "initialBackground": {
+    "seconds": 5,
+    "idlePercent": 65.7243816254417,
+    "busyPercent": 34.275618374558306,
+    "loadBefore": [
+      11.724609375,
+      23.3203125,
+      16.66748046875
+    ],
+    "loadAfter": [
+      11.42626953125,
+      23.06591796875,
+      16.6162109375
+    ]
+  }
+}

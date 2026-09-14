@@ -1,0 +1,2 @@
+[aist#1:0/pcm_s16le @ 0x7b2c0c480] Guessed Channel Layout: stereo
+{"event":"encoded","output":"<repo>/out/checkpoint-smoke/preview.mp4","gif":"<repo>/out/checkpoint-smoke/preview.gif","duration":2,"sourceFrames":30}

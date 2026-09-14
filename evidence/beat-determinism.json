@@ -1,0 +1,8 @@
+{
+  "seed": "film-smoke",
+  "ticks": 16,
+  "samples": 3,
+  "beats": 1,
+  "twoRunsByteIdentical": true,
+  "scope": "Small deterministic smoke; does not establish ecological event frequency"
+}

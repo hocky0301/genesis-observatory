@@ -1,0 +1,21 @@
+=== Test 1: basic remap into a native destination lineage ===
+  ✓ every emitted conn is keyed in destReg.connReg with its innov
+  ✓ IO/bias node ids preserved as identity
+  ✓ hidden ids are all fresh (>= dest node counter before remap)
+  ✓ hidden ids are distinct
+  ✓ innov <-> edge is a bijection (no aliasing)
+  ✓ post-remap evaluate is finite
+=== Test 2: canonicalization removes self-loop / cycle / duplicate ===
+  ✓ no self-loops after canonicalization
+  ✓ no duplicate directed edges
+  ✓ canonical edge set is acyclic
+  ✓ the enabled duplicate 0->18 kept (not the disabled one)
+=== Test 3: twin unification within one source lineage+batch ===
+  ✓ twins from same lineage+batch unify (brainDistance 0)
+  ✓ twins share dest node ids
+  ✓ twins share dest innovation numbers
+  ✓ a different source deme does NOT alias twin hidden ids
+=== Test 4: fuzz — 40 random migrants remap to valid alias-free genomes ===
+  ✓ fuzz: all consistent, acyclic, finite, alias-free
+
+✅ remapBrain correctness OK

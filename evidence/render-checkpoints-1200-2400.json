@@ -1,0 +1,66 @@
+{
+  "camera": "world centre / zoom 0.4",
+  "results": [
+    {
+      "checkpoint": "s42-t1200",
+      "sha256": "90ff55b9823f358b5ebe70401ae38ebfbd5d54acbd17a2b1a6e5ee415c321cca",
+      "file": "render-checkpoint-webgl-t1200.png",
+      "tick": 1200,
+      "population": 2846,
+      "livingSpecies": 2,
+      "renderer": "GLRenderer",
+      "camera": {
+        "cx": 1600,
+        "cy": 1050,
+        "zoom": 0.4
+      },
+      "glError": 0
+    },
+    {
+      "checkpoint": "s42-t2400",
+      "sha256": "73af0d719bc3da222c6565657bc83079fc04c428fc90a4e4c4a7d3b5483e1e92",
+      "file": "render-checkpoint-webgl-t2400.png",
+      "tick": 2400,
+      "population": 3858,
+      "livingSpecies": 8,
+      "renderer": "GLRenderer",
+      "camera": {
+        "cx": 1600,
+        "cy": 1050,
+        "zoom": 0.4
+      },
+      "glError": 0
+    },
+    {
+      "checkpoint": "s42-t1200",
+      "sha256": "90ff55b9823f358b5ebe70401ae38ebfbd5d54acbd17a2b1a6e5ee415c321cca",
+      "file": "render-checkpoint-canvas-t1200.png",
+      "tick": 1200,
+      "population": 2846,
+      "livingSpecies": 2,
+      "renderer": "Renderer",
+      "camera": {
+        "cx": 1600,
+        "cy": 1050,
+        "zoom": 0.4
+      },
+      "glError": null
+    },
+    {
+      "checkpoint": "s42-t2400",
+      "sha256": "73af0d719bc3da222c6565657bc83079fc04c428fc90a4e4c4a7d3b5483e1e92",
+      "file": "render-checkpoint-canvas-t2400.png",
+      "tick": 2400,
+      "population": 3858,
+      "livingSpecies": 8,
+      "renderer": "Renderer",
+      "camera": {
+        "cx": 1600,
+        "cy": 1050,
+        "zoom": 0.4
+      },
+      "glError": null
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GENESIS · renderer evidence</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#071215;color:#cbe6e1;font:13px system-ui}header{height:80px;padding:14px 22px;display:flex;align-items:center;gap:20px}h1{font-size:16px;font-weight:550;margin:0}p{color:#94adae;margin:5px 0}button,select{background:#12302e;color:#cbe6e1;padding:8px;border:1px solid #31504e;border-radius:4px}#stage{position:relative;width:1280px;height:720px;max-width:100vw;background:#081416;overflow:hidden}canvas{position:absolute;inset:0;width:100%;height:100%}pre{white-space:pre-wrap;font-size:12px;margin:20px}a{color:#83d6bd}
+</style>
+<header><div><h1>Renderer evidence</h1><p>Deterministic synthetic scene · rendering only · no simulation</p></div><select id="backend"><option value="webgl">Current WebGL</option><option value="baseline">Original WebGL</option><option value="canvas">Canvas fallback</option></select><button id="run">Measure 240 frames</button><a href="../index.html">Observatory ↗</a></header>
+<div id="stage"></div><pre id="result">Use a quiet machine for comparable timings. This harness measures requestAnimationFrame intervals and CPU submission. It does not measure GPU execution time.</pre>
+<script type="module">
+import { GLRenderer } from '../src/gl-renderer.js';
+import { Renderer } from '../src/renderer.js';
+import { GLRenderer as Baseline } from './bench-baseline/gl-renderer.js';
+import * as snapshot from '../src/render-snapshot.js';
+import * as oldSnapshot from './bench-baseline/render-snapshot.js';
+import { renderFixture } from './render-fixture.js';
+import { renderMuller } from '../src/muller.js';
+const frame = () => new Promise(resolve => requestAnimationFrame(resolve));
+const quantile = (a, q) => { const s = [...a].sort((a,b)=>a-b); return s[Math.min(s.length-1, Math.floor(q*(s.length-1)))]; };
+let currentRenderer, running = false;
+window.runBenchmark = async (options = {}) => {
+  if (running) throw new Error('Benchmark is already running');
+  running = true;
+  try {
+    const o = { backend:'webgl', nc:8000, nf:16000, nk:5800, width:1280, height:720, zoom:0.4, warmup:30, frames:240, clade:false, ...options };
+    if (o.frames < 2) throw new Error('At least two measured frames required');
+    // Release the prior GL context before replacing canvases; repeated runs do
+    // not silently accumulate driver resources or hit Chrome's context limit.
+    currentRenderer?.gl?.getExtension('WEBGL_lose_context')?.loseContext();
+    document.getElementById('backend').value=o.backend;
+    const stage = document.getElementById('stage'); stage.replaceChildren(); stage.style.width=o.width+'px'; stage.style.height=o.height+'px';
+    const base = document.createElement('canvas'), overlay = document.createElement('canvas'); stage.append(base,overlay);
+    let renderer;
+    if (o.backend === 'canvas') { base.remove(); renderer = new Renderer(overlay); }
+    else renderer = (o.backend === 'baseline' ? Baseline : GLRenderer).tryCreate(base,overlay);
+    if (!renderer) throw new Error(o.backend+' context unavailable');
+    currentRenderer = renderer;
+    if(o.paletteConfig) renderer.setConfig(o.paletteConfig);
+    const fixture = renderFixture(o.nc,o.nf,o.nk);
+    if (o.specimen) {
+      fixture.width = 1000; fixture.height = 500;
+      fixture.creatures = fixture.creatures.slice(0,9);
+      for (let i=0;i<fixture.creatures.length;i++) {
+        const c=fixture.creatures[i]; c.x=200+(i%3)*300; c.y=95+Math.floor(i/3)*155;
+        c.heading=-0.3; c.body.size=5; c.speciesId=15;
+        c.age=Math.floor(i/3)*0.5*2000; c.energy=130;
+      }
+    }
+    const layout = o.backend === 'baseline' ? oldSnapshot : snapshot;
+    const buf = layout.pack(fixture,new ArrayBuffer(layout.bufferSize(o.nc,o.nf,o.nk)));
+    renderer.setWorldSize(fixture.width,fixture.height); renderer.camera.cx=fixture.width/2; renderer.camera.cy=fixture.height/2; renderer.camera.zoom=o.zoom;
+    const clade = o.clade ? new Set([1,2,3,4,5,6,7,8]) : null;
+    let ribbon, ribbonTicks, ribbonHistory, ribbonMeta;
+    if (o.ribbon) {
+      ribbon=document.createElement('canvas');stage.append(ribbon);
+      Object.assign(ribbon.style,{top:'auto',bottom:'0',height:'110px',background:'#071215'});
+      ribbonTicks=Array.from({length:320},(_,i)=>i*32);
+      ribbonHistory=new Map();ribbonMeta=new Map();
+      for(const [id,sp] of fixture.species) {
+        ribbonHistory.set(id,ribbonTicks.map((_,i)=>Math.round(sp.count*(0.5+0.5*Math.sin((i+id)/20)**2))));
+        ribbonMeta.set(id,{parent:id>1?Math.floor(id/2):null});
+      }
+    }
+    const draw=()=>{
+      renderer.draw(layout.view(buf,fixture.width,fixture.height),null,clade);
+      if(ribbon)renderMuller(ribbon,ribbonTicks,ribbonHistory,ribbonMeta,{highlightSpecies:clade});
+    };
+    const intervals=[], cpu=[]; let previous;
+    for (let i=0;i<o.warmup+o.frames;i++) {
+      const now=await frame();
+      const start=performance.now();
+      // Include buffer view creation in CPU timings: the baseline eagerly builds
+      // all creature objects, while the current packed path leaves them lazy.
+      draw();
+      const elapsed=performance.now()-start;
+      if(i>=o.warmup){ cpu.push(elapsed); if(previous!=null) intervals.push(now-previous); }
+      previous=now;
+    }
+    const gl=renderer.gl, ext=gl?.getExtension('WEBGL_debug_renderer_info');
+    const result = { schema:1, kind:'synthetic-render-only', options:o, actualViewport:{width:renderer.cssW,height:renderer.cssH,dpr:renderer.camera.dpr},
+      snapshotBytes:buf.byteLength, medianFps:1000/quantile(intervals,0.5), frameMs:{p50:quantile(intervals,0.5),p95:quantile(intervals,0.95)},
+      cpuSubmissionMs:{p50:quantile(cpu,0.5),p95:quantile(cpu,0.95)}, gpuExecutionMs:null,
+      glError:gl ? gl.getError() : null, gpu:ext ? gl.getParameter(ext.UNMASKED_RENDERER_WEBGL) : 'unavailable', userAgent:navigator.userAgent,
+      limitations:['Synthetic fixed scene; excludes simulation and worker transport.','Optional ribbon uses synthetic 320-point histories and is repainted every frame, a conservative stress condition.','CPU submission is not GPU execution time.','Browser visibility, device load, refresh rate and viewport affect results.'], samples:{frameIntervalsMs:intervals,cpuSubmissionMs:cpu} };
+    window.rendererSmoke={
+      creatureProgramLinked:gl ? gl.getProgramParameter(renderer.creatureProg,gl.LINK_STATUS) : null,
+      dotProgramLinked:gl ? gl.getProgramParameter(renderer.dotProg,gl.LINK_STATUS) : null,
+      glError:gl ? gl.getError() : null,
+      renderer:renderer.constructor.name,
+    };
+    window.sampleRenderPixels=()=>{
+      renderer.draw(layout.view(buf,fixture.width,fixture.height),null,clade);
+      const samples=[];
+      for(const c of fixture.creatures.slice(0,9)) {
+        const r=Math.max(1.6,c.body.size*4.2*renderer.camera.zoom), a=c.heading;
+        const localX=-0.3*r,localY=0.3*r;
+        const sx=(c.x-renderer.camera.cx)*renderer.camera.zoom+renderer.cssW/2+localX*Math.cos(a)-localY*Math.sin(a);
+        const sy=(c.y-renderer.camera.cy)*renderer.camera.zoom+renderer.cssH/2+localX*Math.sin(a)+localY*Math.cos(a);
+        const px=Math.floor(sx*renderer.camera.dpr),py=Math.floor(sy*renderer.camera.dpr);
+        let pixel;
+        if(gl) { pixel=new Uint8Array(4);gl.readPixels(px,base.height-py-1,1,1,gl.RGBA,gl.UNSIGNED_BYTE,pixel); }
+        else pixel=renderer.ctx.getImageData(px,py,1,1).data;
+        samples.push(Array.from(pixel));
+      }
+      return samples;
+    };
+    window.benchmarkResult=result; document.getElementById('result').textContent=JSON.stringify(result,null,2); return result;
+  } finally { running=false; }
+};
+document.getElementById('run').onclick=()=>window.runBenchmark({backend:document.getElementById('backend').value}).catch(e=>{document.getElementById('result').textContent=e.stack;});
+window.benchmarkReady=true;
+</script></html>

@@ -1,0 +1,17 @@
+baseline 600/1800 pop=3669
+baseline 1200/1800 pop=3858
+baseline 1800/1800 pop=4404
+completed baseline: pop=4404
+food_half 600/1800 pop=2573
+food_half 1200/1800 pop=2280
+food_half 1800/1800 pop=2340
+completed food_half: pop=2340
+metabolism_double 600/1800 pop=2907
+metabolism_double 1200/1800 pop=2847
+metabolism_double 1800/1800 pop=2987
+completed metabolism_double: pop=2987
+toxin_zero 600/1800 pop=5247
+toxin_zero 1200/1800 pop=6185
+toxin_zero 1800/1800 pop=7563
+completed toxin_zero: pop=7563
+LAB COMPLETE — one seed, exact matched start, not a general ecological law

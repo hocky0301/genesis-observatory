@@ -1,0 +1,106 @@
+{
+  "scope": "Bounded static package audit; no browser launch or performance measurement. Final media and performance acceptance are separate root-owned gates.",
+  "missingDocumentLinks": [],
+  "missingApplicationLinks": [],
+  "missingModuleImports": [],
+  "checkpoints": [
+    {
+      "id": "s42-t1200",
+      "hashMatches": true,
+      "sizeMatches": true,
+      "tickMatches": true,
+      "worldVersion": 4,
+      "verification": {
+        "ticks": 100,
+        "status": "exact",
+        "runtime": "v22.11.0"
+      }
+    },
+    {
+      "id": "s42-t2400",
+      "hashMatches": true,
+      "sizeMatches": true,
+      "tickMatches": true,
+      "worldVersion": 4,
+      "verification": {
+        "ticks": 100,
+        "status": "exact",
+        "runtime": "v22.11.0"
+      }
+    },
+    {
+      "id": "s42-t9000",
+      "hashMatches": true,
+      "sizeMatches": true,
+      "tickMatches": true,
+      "worldVersion": 4,
+      "verification": {
+        "ticks": 100,
+        "status": "exact",
+        "runtime": "v22.11.0"
+      }
+    }
+  ],
+  "manifestDefault": "s42-t2400",
+  "fourLimitationsInSource": {
+    "README.md": true,
+    "index.html": true,
+    "the Japanese article (kept outside this repository, not tracked in git)": true,
+    "src/film.js": true
+  },
+  "packagePrivate": true,
+  "serverLoopbackBinding": true,
+  "checkedMarkdownLocalReferences": 15,
+  "nodeEngine": ">=22",
+  "observerRecords": {
+    "observer-after-default.json": {
+      "fingerprintVersion": 2,
+      "status": "OK",
+      "physicalEqual": true,
+      "bookkeepingEqual": true,
+      "invariants": true
+    },
+    "observer-after-fitshare.json": {
+      "fingerprintVersion": 2,
+      "status": "OK",
+      "physicalEqual": true,
+      "bookkeepingEqual": true,
+      "invariants": true
+    },
+    "observer-after-protect.json": {
+      "fingerprintVersion": 2,
+      "status": "OK",
+      "physicalEqual": true,
+      "bookkeepingEqual": true,
+      "invariants": true
+    },
+    "observer-before-300.json": {
+      "fingerprintVersion": 2,
+      "status": "DIFFERENT",
+      "physicalEqual": true,
+      "bookkeepingEqual": false,
+      "invariants": true
+    },
+    "observer-before-default.json": {
+      "fingerprintVersion": 2,
+      "status": "DIFFERENT",
+      "physicalEqual": true,
+      "bookkeepingEqual": false,
+      "invariants": false
+    },
+    "observer-before-fitshare.json": {
+      "fingerprintVersion": 2,
+      "status": "DIFFERENT",
+      "physicalEqual": false,
+      "bookkeepingEqual": false,
+      "invariants": false
+    },
+    "observer-before-protect.json": {
+      "fingerprintVersion": 2,
+      "status": "DIFFERENT",
+      "physicalEqual": true,
+      "bookkeepingEqual": false,
+      "invariants": false
+    }
+  }
+}

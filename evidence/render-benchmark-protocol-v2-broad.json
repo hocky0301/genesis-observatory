@@ -1,0 +1,27 @@
+{
+  "declaredAt": "2026-09-06T13:35:09.495Z",
+  "mode": "broad",
+  "scope": "Twelve cases across zoom 0.25, 0.4, 0.9: original/current WebGL, current WebGL with clade+ribbon, and Canvas with clade+ribbon.",
+  "protocol": {
+    "version": 2,
+    "label": "measured-with-CPU-idle-gate",
+    "minimumBackgroundIdlePercent": 75,
+    "backgroundProbeSeconds": 5,
+    "rule": "Aggregate CPU idle must be at least 75% for five seconds immediately before each case and for five seconds after rendering stops. During-case CPU and all load averages are reported, not admission gates.",
+    "reason": "The absolute one-minute load gate rejected a completed original-renderer measurement although background CPU probes were about 87% idle across 12 cores. The measured renderer contributes to during-case load. This alternative was declared prospectively; rejected v1 samples remain separate.",
+    "ownership": "Root confirmed all owned production, simulation, media, browser and packaging jobs closed; unrelated user processes remain untouched.",
+    "rejectedCasePolicy": "Record every case once even when admission or post-case quietness fails. Retain raw samples and label failed cases rejected; do not retry or claim quiet-machine acceptance for them."
+  },
+  "uptime": "22:35  up 1 day, 15:58, 2 users, load averages: 6.09 11.61 13.15",
+  "initialLoad": [
+    6.08740234375,
+    11.60546875,
+    13.1455078125
+  ],
+  "power": {
+    "recordedAt": "2026-09-06T13:35:09.508Z",
+    "source": "AC Power",
+    "percent": 16,
+    "state": "charging"
+  }
+}

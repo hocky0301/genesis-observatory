@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 2,
+  "default": "s42-t2400",
+  "checkpoints": [
+    {
+      "id": "s42-t1200",
+      "title": "A world takes shape",
+      "description": "Seed 42 at tick 1200. Resume, observe, or branch an intervention.",
+      "url": "/checkpoints/s42-t1200-90ff55b9823f.json.gz",
+      "tick": 1200,
+      "sha256": "90ff55b9823f358b5ebe70401ae38ebfbd5d54acbd17a2b1a6e5ee415c321cca",
+      "bytes": 2116282,
+      "metrics": {
+        "tick": 1200,
+        "population": 2846,
+        "food": 15754,
+        "carrion": 289,
+        "maxGen": 16,
+        "avgGen": 6.977863668306395,
+        "avgEnergy": 80.61928053826392,
+        "avgEaten": 168.68547926134306,
+        "avgAge": 467.73858046380883,
+        "avgDiet": 0.0856120878606746,
+        "avgSpeed": 3.1372379991524633,
+        "avgSize": 1.324919661333857,
+        "carnivores": 75,
+        "herbivores": 2720,
+        "scavengers": 51,
+        "avgConns": 32.26493323963457,
+        "avgHidden": 0.39669711876317637,
+        "avgAddedConns": 0.2649332396345727,
+        "species": 2,
+        "diversity": 0.8410235935097845,
+        "birthsTotal": 3359,
+        "deathsTotal": 913
+      },
+      "verification": {
+        "ticks": 100,
+        "status": "exact",
+        "runtime": "v22.11.0"
+      }
+    },
+    {
+      "id": "s42-t2400",
+      "title": "Lineages diverge",
+      "description": "Seed 42 at tick 2400. Resume, observe, or branch an intervention.",
+      "url": "/checkpoints/s42-t2400-73af0d719bc3.json.gz",
+      "tick": 2400,
+      "sha256": "73af0d719bc3da222c6565657bc83079fc04c428fc90a4e4c4a7d3b5483e1e92",
+      "bytes": 2846603,
+      "metrics": {
+        "tick": 2400,
+        "population": 3858,
+        "food": 13519,
+        "carrion": 658,
+        "maxGen": 25,
+        "avgGen": 13.448159668221876,
+        "avgEnergy": 77.68583266450355,
+        "avgEaten": 196.74613126932135,
+        "avgAge": 570.2475375842405,
+        "avgDiet": 0.2013790786341523,
+        "avgSpeed": 3.319807433601383,
+        "avgSize": 1.5766837957171347,
+        "carnivores": 867,
+        "herbivores": 2872,
+        "scavengers": 119,
+        "avgConns": 32.32011404872991,
+        "avgHidden": 0.8208916537065837,
+        "avgAddedConns": 0.3201140487299128,
+        "species": 8,
+        "diversity": 0.848245793347026,
+        "birthsTotal": 10298,
+        "deathsTotal": 6840
+      },
+      "verification": {
+        "ticks": 100,
+        "status": "exact",
+        "runtime": "v22.11.0"
+      }
+    },
+    {
+      "id": "s42-t9000",
+      "title": "An evolved ecosystem",
+      "description": "Seed 42 at tick 9000. Resume, observe, or branch an intervention.",
+      "url": "/checkpoints/s42-t9000-94135a708fc4.json.gz",
+      "tick": 9000,
+      "sha256": "94135a708fc4b9cf665c37efcc73230a6680ff0be5089ca9bb1620aff5f4fa15",
+      "bytes": 4273399,
+      "metrics": {
+        "tick": 9000,
+        "population": 5587,
+        "food": 13042,
+        "carrion": 534,
+        "maxGen": 49,
+        "avgGen": 33.557007338464295,
+        "avgEnergy": 76.13357150035998,
+        "avgEaten": 177.86468377161617,
+        "avgAge": 741.4897082512977,
+        "avgDiet": 0.08625074358806879,
+        "avgSpeed": 3.3988904640276307,
+        "avgSize": 1.6632782223910072,
+        "carnivores": 313,
+        "herbivores": 4146,
+        "scavengers": 1128,
+        "avgConns": 29.32772507606945,
+        "avgHidden": 1.303561839985681,
+        "avgAddedConns": -2.6722749239305514,
+        "species": 42,
+        "diversity": 0.7203154266973848,
+        "birthsTotal": 42830,
+        "deathsTotal": 37643
+      },
+      "verification": {
+        "ticks": 100,
+        "status": "exact",
+        "runtime": "v22.11.0"
+      }
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+[
+  {
+    "id": "s42-t1200",
+    "metrics": {
+      "tick": 1200,
+      "population": 2846,
+      "food": 15754,
+      "carrion": 289,
+      "maxGen": 16,
+      "avgGen": 6.977863668306395,
+      "avgEnergy": 80.61928053826392,
+      "avgEaten": 168.68547926134306,
+      "avgAge": 467.73858046380883,
+      "avgDiet": 0.0856120878606746,
+      "avgSpeed": 3.1372379991524633,
+      "avgSize": 1.324919661333857,
+      "carnivores": 75,
+      "herbivores": 2720,
+      "scavengers": 51,
+      "avgConns": 32.26493323963457,
+      "avgHidden": 0.39669711876317637,
+      "avgAddedConns": 0.2649332396345727,
+      "species": 2,
+      "diversity": 0.8410235935097845,
+      "birthsTotal": 3359,
+      "deathsTotal": 913
+    }
+  },
+  {
+    "id": "s42-t2400",
+    "metrics": {
+      "tick": 2400,
+      "population": 3858,
+      "food": 13519,
+      "carrion": 658,
+      "maxGen": 25,
+      "avgGen": 13.448159668221876,
+      "avgEnergy": 77.68583266450355,
+      "avgEaten": 196.74613126932135,
+      "avgAge": 570.2475375842405,
+      "avgDiet": 0.2013790786341523,
+      "avgSpeed": 3.319807433601383,
+      "avgSize": 1.5766837957171347,
+      "carnivores": 867,
+      "herbivores": 2872,
+      "scavengers": 119,
+      "avgConns": 32.32011404872991,
+      "avgHidden": 0.8208916537065837,
+      "avgAddedConns": 0.3201140487299128,
+      "species": 8,
+      "diversity": 0.848245793347026,
+      "birthsTotal": 10298,
+      "deathsTotal": 6840
+    }
+  },
+  {
+    "id": "s42-t9000",
+    "metrics": {
+      "tick": 9000,
+      "population": 5587,
+      "food": 13042,
+      "carrion": 534,
+      "maxGen": 49,
+      "avgGen": 33.557007338464295,
+      "avgEnergy": 76.13357150035998,
+      "avgEaten": 177.86468377161617,
+      "avgAge": 741.4897082512977,
+      "avgDiet": 0.08625074358806879,
+      "avgSpeed": 3.3988904640276307,
+      "avgSize": 1.6632782223910072,
+      "carnivores": 313,
+      "herbivores": 4146,
+      "scavengers": 1128,
+      "avgConns": 29.32772507606945,
+      "avgHidden": 1.303561839985681,
+      "avgAddedConns": -2.6722749239305514,
+      "species": 42,
+      "diversity": 0.7203154266973848,
+      "birthsTotal": 42830,
+      "deathsTotal": 37643
+    }
+  }
+]

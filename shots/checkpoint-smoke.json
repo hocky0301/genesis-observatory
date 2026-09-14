@@ -1,0 +1,9 @@
+{
+  "name": "checkpoint-smoke",
+  "duration": 2,
+  "frames": 30,
+  "sourceFps": 15,
+  "ticksPerFrame": 1,
+  "checkpoint": "/checkpoints/s42-t2400-73af0d719bc3.json.gz",
+  "labResults": "/evidence/lab-results.json"
+}

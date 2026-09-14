@@ -1,0 +1,291 @@
+FAIL re-splitting a re-enabled connection keeps innovations unique: duplicate innovation after splitting the same edge twice
+
+3 !== 5
+
+FAIL completed tick counts each newborn once: newborn was included in both creatures and pending births
+
+3 !== 2
+
+FAIL checkpoint preserves every creature field and genome without rounding: fields lost or rounded by checkpoint
++ actual - expected
+
++ [
++   'id',
++   'x',
++   'y',
++   'heading',
++   'energy',
++   'phase',
++   'speed',
++   'eaten'
++ ]
+- []
+FAIL checkpoint preserves indexed resources and free-list order: Expected values to be strictly deep-equal:
++ actual - expected ... Lines skipped
+
+  [
+    {
+...
+        1,
+        1,
++       1,
+-       0,
+        1,
+        1,
+...
+        1,
+        1,
++       0,
+-       1,
+        0,
+        0,
+...
+        658,
+        657,
++       656
+-       554
+      ],
+      occupied: [
+        [
+          0,
++         272.5,
++         64.80000305175781,
+-         272.469482421875,
+-         64.752197265625,
+          250,
+          0
+        ],
+        [
+          1,
++         349.79998779296875,
++         88.19999694824219,
+-         349.813720703125,
+-         88.2230224609375,
+          250,
+          0
+        ],
+        [
+          2,
++         57.29999923706055,
++         406,
+-         57.34360885620117,
+-         406.0194091796875,
+          250,
+          0
+        ],
+        [
+          3,
++         612,
+...
+-         612.0446166992188,
+...
+FAIL checkpoint preserves populated species liveness: species 1
+
+false !== true
+
+FAIL checkpoint never revives a pending cataclysm death: Expected values to be strictly equal:
+
+30 !== 0
+
+FAIL checkpoint resumes the exact next 12 ticks (default): first post-load divergence at +1 ticks
++ actual - expected ... Lines skipped
+
+  {
+    blooms: [
+...
+            innov: 0,
+            to: 16,
++           w: -0.7171
+-           w: -0.7171367341838072
+          },
+          {
+...
+            innov: 1,
+            to: 17,
++           w: 0.4933
+-           w: 0.4932902821944404
+          },
+          {
+...
+            innov: 2,
+            to: 16,
++           w: 1.1121
+-           w: 1.1121145010252735
+          },
+          {
+...
+            innov: 3,
+            to: 17,
++           w: -0.2149
+-           w: -0.21487587731901298
+          },
+          {
+...
+            innov: 4,
+            to: 16,
++           w: 0.1816
+-           w: 0.18159015826176597
+          },
+          {
+...
+            innov: 5,
+            to: 17,
++           w: -0.3512
+-           w: -0.3512243826166459
+          },
+          {
+...
+            innov: 6,
+            to: 16,
++           w: -1.364
+-           w: -1.3639959251740525
+          },
+          {
+...
+            innov: 7,
+            to: 17,
++           w: -1.8241
+-           w: -1.8241322773615303
+          },
+          {
+...
+            innov: 8,
+            to: 16,
++           w: 1.0314
+...
+-    
+FAIL checkpoint resumes the exact next 12 ticks (protect): first post-load divergence at +1 ticks
++ actual - expected ... Lines skipped
+
+  {
+    blooms: [
+...
+            innov: 0,
+            to: 16,
++           w: -0.7171
+-           w: -0.7171367341838072
+          },
+          {
+...
+            innov: 1,
+            to: 17,
++           w: 0.4933
+-           w: 0.4932902821944404
+          },
+          {
+...
+            innov: 2,
+            to: 16,
++           w: 1.1121
+-           w: 1.1121145010252735
+          },
+          {
+...
+            innov: 3,
+            to: 17,
++           w: -0.2149
+-           w: -0.21487587731901298
+          },
+          {
+...
+            innov: 4,
+            to: 16,
++           w: 0.1816
+-           w: 0.18159015826176597
+          },
+          {
+...
+            innov: 5,
+            to: 17,
++           w: -0.3512
+-           w: -0.3512243826166459
+          },
+          {
+...
+            innov: 6,
+            to: 16,
++           w: -1.364
+-           w: -1.3639959251740525
+          },
+          {
+...
+            innov: 7,
+            to: 17,
++           w: -1.8241
+-           w: -1.8241322773615303
+          },
+          {
+...
+            innov: 8,
+            to: 16,
++           w: 1.0314
+...
+-    
+FAIL checkpoint resumes the exact next 12 ticks (fitShare): first post-load divergence at +1 ticks
++ actual - expected ... Lines skipped
+
+  {
+    blooms: [
+...
+            innov: 0,
+            to: 16,
++           w: -0.7171
+-           w: -0.7171367341838072
+          },
+          {
+...
+            innov: 1,
+            to: 17,
++           w: 0.4933
+-           w: 0.4932902821944404
+          },
+          {
+...
+            innov: 2,
+            to: 16,
++           w: 1.1121
+-           w: 1.1121145010252735
+          },
+          {
+...
+            innov: 3,
+            to: 17,
++           w: -0.2149
+-           w: -0.21487587731901298
+          },
+          {
+...
+            innov: 4,
+            to: 16,
++           w: 0.1816
+-           w: 0.18159015826176597
+          },
+          {
+...
+            innov: 5,
+            to: 17,
++           w: -0.3512
+-           w: -0.3512243826166459
+          },
+          {
+...
+            innov: 6,
+            to: 16,
++           w: -1.364
+-           w: -1.3639959251740525
+          },
+          {
+...
+            innov: 7,
+            to: 17,
++           w: -1.8241
+-           w: -1.8241322773615303
+          },
+          {
+...
+            innov: 8,
+            to: 16,
++           w: 1.0314
+...
+-    
+{"tests":9,"failures":9,"names":["re-splitting a re-enabled connection keeps innovations unique","completed tick counts each newborn once","checkpoint preserves every creature field and genome without rounding","checkpoint preserves indexed resources and free-list order","checkpoint preserves populated species liveness","checkpoint never revives a pending cataclysm death","checkpoint resumes the exact next 12 ticks (default)","checkpoint resumes the exact next 12 ticks (protect)","checkpoint resumes the exact next 12 ticks (fitShare)"]}

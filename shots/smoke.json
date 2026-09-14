@@ -1,0 +1,5 @@
+{
+  "name": "smoke", "duration": 2, "frames": 30, "sourceFps": 15, "ticksPerFrame": 1,
+  "fromTick": 80,
+  "config": { "seed": "film-smoke", "startPopulation": 30, "maxPopulation": 120, "width": 900, "height": 600, "startFood": 700, "maxFood": 1400, "maxCarrion": 300, "foodRate": 8, "protect": false, "fitShare": false }
+}
